@@ -99,7 +99,7 @@ const MachineLearningData = () => {
                 </div>
               </div>
               <a
-                href={`mailto:data@biocircuitlaboratories.org?subject=Dataset Access: ${ds.title}`}
+                href={`mailto:Biocircuitlaboratories@gmail.com?subject=Dataset Access: ${ds.title}`}
                 className="shrink-0 px-5 py-2.5 rounded-lg font-display text-xs tracking-wider uppercase border border-border text-muted-foreground hover:border-primary hover:text-primary transition-all duration-300"
               >
                 {ds.access === "Open" ? "Access Data" : "Request Access"}
