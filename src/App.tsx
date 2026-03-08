@@ -19,6 +19,9 @@ import FashionTextiles from "./pages/consulting/FashionTextiles";
 import ArchitectureDesign from "./pages/consulting/ArchitectureDesign";
 import SportsPerformance from "./pages/consulting/SportsPerformance";
 import ResearchDevelopment from "./pages/consulting/ResearchDevelopment";
+import CourseDetail from "./pages/CourseDetail";
+import CourseLearn from "./pages/CourseLearn";
+import CourseCertificate from "./pages/CourseCertificate";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +44,9 @@ const App = () => (
           <Route path="/consulting/sports-performance" element={<SportsPerformance />} />
           <Route path="/consulting/research-development" element={<ResearchDevelopment />} />
           <Route path="/education" element={<Education />} />
+          <Route path="/course/:courseId" element={<CourseDetail />} />
+          <Route path="/course/:courseId/module/:moduleId" element={<CourseLearn />} />
+          <Route path="/course/:courseId/certificate" element={<CourseCertificate />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/biotech-workshops" element={<BiotechWorkshops />} />
           <Route path="/machine-learning-data" element={<MachineLearningData />} />
