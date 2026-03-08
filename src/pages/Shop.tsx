@@ -1,117 +1,121 @@
 import { motion } from "framer-motion";
-import { ShoppingBag, Bell } from "lucide-react";
-import { useState } from "react";
+import { ShoppingBag, Shield, Cpu, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import ServicePageLayout from "@/components/ServicePageLayout";
 
-const previewItems = [
+const products = [
   {
-    title: "BioCircuit Lab Kit — Starter",
-    description: "Everything you need to run your first water experiments at home. Includes pH strips, sample containers, and a guided experiment booklet.",
-    category: "Lab Equipment",
+    title: "Obsidian",
+    tagline: "Your Private AI. Offline. Forever.",
+    description:
+      "A lightweight, privacy-first AI assistant that runs entirely on your machine. No cloud. No data leaks. No subscriptions. Just your knowledge, your queries, your control.",
+    price: "₦350,000",
+    status: "available" as const,
+    href: "/shop/obsidian",
+    icon: Shield,
+    features: ["100% Offline", "Custom Knowledge Base", "Docker-Based", "Zero Data Sharing"],
   },
   {
-    title: "Structured Water Device",
-    description: "A portable vortexing device designed based on our water research findings. Explore water structuring in your own space.",
-    category: "Wellness Tools",
-  },
-  {
-    title: "BioCircuit Apparel",
-    description: "Wear the circuit. Bio-inspired designs printed on sustainably-sourced materials.",
-    category: "Merchandise",
-  },
-  {
-    title: "Research Data Packs",
-    description: "Curated datasets from our machine learning and water research divisions, packaged for independent analysis.",
-    category: "Digital",
+    title: "BioCircuit Biosensor",
+    tagline: "Biological Sensing, Reimagined.",
+    description:
+      "A next-generation wearable biosensor platform for real-time physiological monitoring — from galvanic skin response to micro-EEG. Designed for researchers, biohackers, and wellness practitioners.",
+    price: "Coming Soon",
+    status: "coming-soon" as const,
+    href: "#",
+    icon: Cpu,
+    features: ["Multi-Modal Sensing", "Open Data Format", "Research-Grade", "Wearable Design"],
   },
 ];
 
 const Shop = () => {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleNotify = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   return (
     <ServicePageLayout
       title="Shop"
-      subtitle="Our virtual store is launching soon — curated tools, kits, and resources for the modern biohacker and wellness enthusiast."
-      overline="Coming Soon"
+      subtitle="Curated tools for privacy, performance, and biological insight — built by researchers, for researchers."
+      overline="Products"
     >
-      {/* Coming soon banner */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="rounded-xl border border-bio-warm/30 bg-bio-warm/5 p-8 text-center mb-16"
-      >
-        <ShoppingBag className="mx-auto mb-4 text-bio-warm" size={32} />
-        <h2 className="font-display text-xl font-bold text-foreground mb-2">
-          Store Launching Soon
-        </h2>
-        <p className="font-body text-muted-foreground mb-6 max-w-md mx-auto">
-          We're curating something special. Get notified when we go live.
-        </p>
-
-        {!submitted ? (
-          <form onSubmit={handleNotify} className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="your@email.com"
-              required
-              className="flex-1 w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground font-body text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-            />
-            <button
-              type="submit"
-              className="flex items-center gap-2 px-6 py-3 rounded-lg font-display text-sm tracking-wider uppercase bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-shadow duration-500 whitespace-nowrap"
-            >
-              <Bell size={14} />
-              Notify Me
-            </button>
-          </form>
-        ) : (
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {products.map((product, i) => (
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="text-primary font-display text-sm tracking-wider"
-          >
-            ✓ You'll be notified when we launch!
-          </motion.div>
-        )}
-      </motion.div>
-
-      {/* Preview items */}
-      <h2 className="font-display text-2xl font-bold text-foreground mb-8 text-center">
-        Sneak Peek
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {previewItems.map((item, i) => (
-          <motion.div
-            key={item.title}
-            initial={{ opacity: 0, y: 20 }}
+            key={product.title}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1, duration: 0.5 }}
-            className="group p-6 rounded-xl border border-border bg-card/50 opacity-75 hover:opacity-100 transition-all duration-500"
+            transition={{ delay: i * 0.15, duration: 0.6 }}
           >
-            <span className="text-[10px] tracking-wider uppercase text-muted-foreground font-body">
-              {item.category}
-            </span>
-            <h3 className="font-display text-base font-semibold text-foreground mt-2 mb-2">
-              {item.title}
-            </h3>
-            <p className="font-body text-sm text-muted-foreground leading-relaxed">
-              {item.description}
-            </p>
+            {product.status === "available" ? (
+              <Link to={product.href} className="block group h-full">
+                <ProductCard product={product} />
+              </Link>
+            ) : (
+              <div className="h-full">
+                <ProductCard product={product} />
+              </div>
+            )}
           </motion.div>
         ))}
       </div>
     </ServicePageLayout>
+  );
+};
+
+const ProductCard = ({ product }: { product: (typeof products)[number] }) => {
+  const isAvailable = product.status === "available";
+
+  return (
+    <div
+      className={`relative rounded-xl border p-8 h-full flex flex-col transition-all duration-500 overflow-hidden ${
+        isAvailable
+          ? "border-primary/30 bg-card/80 hover:border-primary hover:shadow-[0_0_40px_hsl(var(--primary)/0.15)] group-hover:scale-[1.01]"
+          : "border-border bg-card/30 opacity-70"
+      }`}
+    >
+      {/* Status badge */}
+      {product.status === "coming-soon" && (
+        <span className="absolute top-4 right-4 text-[10px] tracking-[0.2em] uppercase px-3 py-1 rounded-full border border-bio-warm/30 text-bio-warm bg-bio-warm/5 font-body">
+          Coming Soon
+        </span>
+      )}
+
+      <div className="w-14 h-14 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
+        <product.icon size={26} className="text-primary" />
+      </div>
+
+      <h2 className="font-display text-2xl font-bold text-foreground mb-1">
+        {product.title}
+      </h2>
+      <p className="font-display text-sm text-primary tracking-wide mb-4">
+        {product.tagline}
+      </p>
+      <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6 flex-1">
+        {product.description}
+      </p>
+
+      {/* Feature pills */}
+      <div className="flex flex-wrap gap-2 mb-6">
+        {product.features.map((f) => (
+          <span
+            key={f}
+            className="text-[10px] tracking-wider uppercase px-3 py-1 rounded-full border border-border text-muted-foreground font-body"
+          >
+            {f}
+          </span>
+        ))}
+      </div>
+
+      {/* Price & CTA */}
+      <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/50">
+        <span className="font-display text-xl font-bold text-foreground">
+          {product.price}
+        </span>
+        {isAvailable && (
+          <span className="flex items-center gap-1 text-xs text-primary font-display tracking-wider uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Learn More <ArrowRight size={14} />
+          </span>
+        )}
+      </div>
+    </div>
   );
 };
 
