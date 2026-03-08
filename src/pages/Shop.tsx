@@ -16,15 +16,15 @@ const products = [
     features: ["100% Offline", "Custom Knowledge Base", "Docker-Based", "Zero Data Sharing"],
   },
   {
-    title: "BioCircuit Biosensor",
-    tagline: "Biological Sensing, Reimagined.",
+    title: "BioCircuit Biosensor Wear",
+    tagline: "Technology Meets Fashion. Personalised to You.",
     description:
-      "A next-generation wearable biosensor platform for real-time physiological monitoring — from galvanic skin response to micro-EEG. Designed for researchers, biohackers, and wellness practitioners.",
+      "Smart wearable clothing embedded with biosensor arrays — monitoring heart rate variability, skin conductance, and movement patterns while you wear your style. Fully customisable fabrics, fits, and sensor configurations. Where fashion becomes functional and technology becomes invisible.",
     price: "Coming Soon",
     status: "coming-soon" as const,
     href: "#",
     icon: Cpu,
-    features: ["Multi-Modal Sensing", "Open Data Format", "Research-Grade", "Wearable Design"],
+    features: ["Wearable Biosensors", "Custom Fashion", "Personalised Tech", "Adaptive Clothing"],
   },
 ];
 
