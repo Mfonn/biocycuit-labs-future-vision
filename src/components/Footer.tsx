@@ -1,4 +1,5 @@
 import { Youtube, Instagram, Newspaper } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const socialLinks = [
   {
@@ -23,8 +24,8 @@ const Footer = () => {
     <footer className="border-t border-border/50 py-10 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full border-2 border-primary/50 flex items-center justify-center">
-            <div className="w-2 h-2 rounded-full bg-primary" />
+          <div className="w-8 h-8 rounded-full overflow-hidden">
+            <img src={logo} alt="BioCircuit Laboratories" className="w-full h-full object-cover" />
           </div>
           <span className="font-display text-xs tracking-wider text-muted-foreground">
             BIOCIRCUIT LABORATORIES
