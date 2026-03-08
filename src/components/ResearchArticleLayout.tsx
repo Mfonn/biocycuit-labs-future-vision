@@ -155,7 +155,7 @@ const ResearchArticleLayout = ({
             ← Back to All Research
           </Link>
           <a
-            href="mailto:research@biocircuitlaboratories.org"
+            href="mailto:Biocircuitlaboratories@gmail.com"
             className="px-6 py-3 rounded-lg font-display text-sm tracking-wider uppercase bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-shadow duration-500"
           >
             Discuss This Research
