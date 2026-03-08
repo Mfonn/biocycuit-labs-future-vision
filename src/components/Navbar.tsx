@@ -22,9 +22,8 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 rounded-full border-2 border-primary flex items-center justify-center overflow-hidden">
-            <div className="w-3 h-3 rounded-full bg-primary animate-pulse-ring" />
-            <div className="absolute inset-0 rounded-full bg-primary/10" />
+          <div className="relative w-10 h-10 rounded-full overflow-hidden">
+            <img src={logo} alt="BioCircuit Laboratories" className="w-full h-full object-cover" />
           </div>
           <div>
             <span className="font-display text-sm font-bold tracking-wider text-foreground group-hover:text-primary transition-colors">
