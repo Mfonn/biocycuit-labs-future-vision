@@ -49,6 +49,7 @@ const App = () => (
           <Route path="/course/:courseId/module/:moduleId" element={<CourseLearn />} />
           <Route path="/course/:courseId/certificate" element={<CourseCertificate />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/obsidian" element={<Obsidian />} />
           <Route path="/biotech-workshops" element={<BiotechWorkshops />} />
           <Route path="/machine-learning-data" element={<MachineLearningData />} />
           <Route path="*" element={<NotFound />} />
