@@ -1,31 +1,36 @@
 import { motion } from "framer-motion";
 import { Shirt, Building2, Dumbbell, Microscope, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 const areas = [
   {
     icon: Shirt,
     title: "Fashion & Textiles",
-    description: "Bio-fabricated materials, sustainable dyes from microorganisms, and smart textiles that respond to the body — we help fashion brands integrate living technology into their collections.",
-    examples: ["Mycelium leather alternatives", "Bacteria-dyed fabrics", "Responsive biopolymer garments"],
+    href: "/consulting/fashion-textiles",
+    description: "From barkcloth and mud cloth to mycelium leather and biosensor garments — we bridge African textile traditions with cutting-edge bio-fabrication.",
+    examples: ["Barkcloth & bio-fabricated materials", "Mud cloth biochemistry at scale", "Smart textiles & wearable biosensors"],
   },
   {
     icon: Building2,
     title: "Architecture & Design",
-    description: "Living walls, bio-responsive building materials, and organisms that self-heal concrete. We consult architects on integrating biological systems into built environments.",
-    examples: ["Self-healing bio-concrete", "Algae-based air filtration facades", "Bioluminescent lighting systems"],
+    href: "/consulting/architecture-design",
+    description: "From Great Zimbabwe's dry-stone masonry to self-healing bio-concrete — African building traditions solved problems modern architecture still struggles with.",
+    examples: ["Rammed earth & bio-cemented structures", "Termite mound biomimicry (passive HVAC)", "Mycelium insulation & living facades"],
   },
   {
     icon: Dumbbell,
     title: "Sports & Performance",
-    description: "Biotech-enhanced recovery, microbiome-informed training, and performance analytics rooted in biological data. We bring science to the athlete.",
-    examples: ["Microbiome performance profiling", "Bio-sensor integration", "Recovery optimization protocols"],
+    href: "/consulting/sports-performance",
+    description: "African athletic traditions contain performance wisdom modern sports science is only now decoding — from Senegalese wrestling conditioning to East African endurance nutrition.",
+    examples: ["Ethnobotanical performance formulations", "Microbiome-informed nutrition", "Biotech-enhanced analytics"],
   },
   {
     icon: Microscope,
     title: "Research & Development",
-    description: "Custom consulting for organizations looking to explore or expand their biotechnology capabilities. From lab design to experimental methodology.",
-    examples: ["Lab setup consulting", "Protocol development", "Biotech feasibility studies"],
+    href: "/consulting/research-development",
+    description: "For technology companies that want to withstand the biological century — bridging digital engineering with synthetic biology, biosensors, and bio-manufacturing.",
+    examples: ["Biotech resilience audits", "Synthetic biology strategy", "Bio-digital integration"],
   },
 ];
 
@@ -33,7 +38,7 @@ const BiotechnologyConsulting = () => {
   return (
     <ServicePageLayout
       title="Biotechnology Consulting"
-      subtitle="Infusing biotechnology into your fashion, architecture, and sports — bridging the gap between organic systems and modern industry."
+      subtitle="Infusing biotechnology into fashion, architecture, sports, and R&D — bridging African traditional methods with cutting-edge biological science."
       overline="Consulting Services"
     >
       {/* Areas grid */}
@@ -45,25 +50,35 @@ const BiotechnologyConsulting = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.12, duration: 0.6 }}
-            className="group p-8 rounded-xl border border-border bg-card/50 hover:border-primary/40 hover:glow-border transition-all duration-500"
           >
-            <div className="w-14 h-14 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-              <area.icon className="text-primary" size={24} />
-            </div>
-            <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-              {area.title}
-            </h3>
-            <p className="font-body text-sm text-muted-foreground leading-relaxed mb-5">
-              {area.description}
-            </p>
-            <ul className="space-y-2">
-              {area.examples.map((ex) => (
-                <li key={ex} className="flex items-center gap-2 text-sm font-body text-muted-foreground/80">
-                  <ArrowRight size={12} className="text-primary shrink-0" />
-                  {ex}
-                </li>
-              ))}
-            </ul>
+            <Link
+              to={area.href}
+              className="group relative block p-8 rounded-xl border border-border bg-card/50 hover:border-primary/40 hover:glow-border transition-all duration-500 h-full overflow-hidden"
+            >
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-shimmer" />
+              <div className="relative z-10">
+                <div className="w-14 h-14 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                  <area.icon className="text-primary" size={24} />
+                </div>
+                <h3 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  {area.title}
+                </h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed mb-5">
+                  {area.description}
+                </p>
+                <ul className="space-y-2 mb-5">
+                  {area.examples.map((ex) => (
+                    <li key={ex} className="flex items-center gap-2 text-sm font-body text-muted-foreground/80">
+                      <ArrowRight size={12} className="text-primary shrink-0" />
+                      {ex}
+                    </li>
+                  ))}
+                </ul>
+                <span className="inline-flex items-center gap-2 text-xs text-primary font-display tracking-wider uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Explore In Depth <ArrowRight size={14} />
+                </span>
+              </div>
+            </Link>
           </motion.div>
         ))}
       </div>

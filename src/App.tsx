@@ -15,6 +15,10 @@ import AutismNeurodivergence from "./pages/research/AutismNeurodivergence";
 import WaterResearch from "./pages/research/WaterResearch";
 import Numerology from "./pages/research/Numerology";
 import MyceliumElectrodeArrays from "./pages/research/MyceliumElectrodeArrays";
+import FashionTextiles from "./pages/consulting/FashionTextiles";
+import ArchitectureDesign from "./pages/consulting/ArchitectureDesign";
+import SportsPerformance from "./pages/consulting/SportsPerformance";
+import ResearchDevelopment from "./pages/consulting/ResearchDevelopment";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +36,10 @@ const App = () => (
           <Route path="/research/numerology" element={<Numerology />} />
           <Route path="/research/mycelium-electrode-arrays" element={<MyceliumElectrodeArrays />} />
           <Route path="/biotechnology-consulting" element={<BiotechnologyConsulting />} />
+          <Route path="/consulting/fashion-textiles" element={<FashionTextiles />} />
+          <Route path="/consulting/architecture-design" element={<ArchitectureDesign />} />
+          <Route path="/consulting/sports-performance" element={<SportsPerformance />} />
+          <Route path="/consulting/research-development" element={<ResearchDevelopment />} />
           <Route path="/education" element={<Education />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/biotech-workshops" element={<BiotechWorkshops />} />
