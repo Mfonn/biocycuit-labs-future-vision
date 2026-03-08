@@ -433,7 +433,7 @@ const Obsidian = () => {
               href="#"
               onClick={(e) => {
                 e.preventDefault();
-                alert("Docker downloads will be available upon purchase. Contact us at contact@biocircuitlaboratories.org to proceed.");
+                alert("Docker downloads will be available upon purchase. Contact us at Biocircuitlaboratories@gmail.com to proceed.");
               }}
               className="flex items-center justify-center gap-2 w-full py-3 rounded-lg font-display text-sm tracking-wider uppercase bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-shadow duration-500"
             >
@@ -485,7 +485,7 @@ const Obsidian = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="mailto:contact@biocircuitlaboratories.org?subject=Obsidian%20Purchase%20Inquiry"
+              href="mailto:Biocircuitlaboratories@gmail.com?subject=Obsidian%20Purchase%20Inquiry"
               className="px-8 py-4 rounded-lg font-display text-sm tracking-wider uppercase bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-shadow duration-500"
             >
               Purchase Obsidian — ₦350,000

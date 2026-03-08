@@ -103,7 +103,7 @@ const SportsPerformance = () => {
           <h2 className="font-display text-xl font-bold text-foreground mb-4">Elevate Your Performance Program</h2>
           <p className="font-body text-muted-foreground mb-6">For sports brands, athletic organizations, and performance centers looking to integrate biotechnology with time-tested conditioning wisdom.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="mailto:consulting@biocircuitlaboratories.org?subject=Sports Consulting" className="px-8 py-4 rounded-lg font-display text-sm tracking-wider uppercase bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-shadow duration-500">Start a Conversation</a>
+            <a href="mailto:Biocircuitlaboratories@gmail.com?subject=Sports Consulting" className="px-8 py-4 rounded-lg font-display text-sm tracking-wider uppercase bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-shadow duration-500">Start a Conversation</a>
             <Link to="/biotechnology-consulting" className="px-8 py-4 rounded-lg font-display text-sm tracking-wider uppercase border border-border text-muted-foreground hover:border-primary hover:text-primary transition-all duration-500">← All Consulting Areas</Link>
           </div>
         </div>

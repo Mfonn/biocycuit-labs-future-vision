@@ -54,7 +54,7 @@ const ContactSection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
         >
           <a
-            href="mailto:contact@biocircuitlaboratories.org"
+            href="mailto:Biocircuitlaboratories@gmail.com"
             className="group flex items-center gap-3 px-8 py-4 rounded-lg font-display text-sm tracking-wider uppercase bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-all duration-500"
           >
             <Mail size={18} />

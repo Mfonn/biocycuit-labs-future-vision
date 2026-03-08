@@ -117,7 +117,7 @@ const BiotechnologyConsulting = () => {
 
       <div className="text-center">
         <a
-          href="mailto:consulting@biocircuitlaboratories.org?subject=Consulting Inquiry"
+          href="mailto:Biocircuitlaboratories@gmail.com?subject=Consulting Inquiry"
           className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-display text-sm tracking-wider uppercase bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-shadow duration-500"
         >
           Book a Consultation

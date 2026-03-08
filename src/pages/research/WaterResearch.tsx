@@ -106,7 +106,7 @@ const WaterResearch = () => {
           </div>
           <div className="mt-6">
             <a
-              href="mailto:research@biocircuitlaboratories.org?subject=Water Research Contribution"
+              href="mailto:Biocircuitlaboratories@gmail.com?subject=Water Research Contribution"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-display text-sm tracking-wider uppercase bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-shadow duration-500"
             >
               Join This Research
