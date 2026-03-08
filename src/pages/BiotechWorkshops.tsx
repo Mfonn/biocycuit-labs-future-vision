@@ -9,7 +9,7 @@ const upcomingWorkshops = [
     description: "Learn how to extract real DNA from fruits using household items. A fun, accessible intro to molecular biology.",
     duration: "3 hours",
     format: "In-Person / Virtual",
-    level: "Beginner — No experience needed",
+    level: "Beginner, no experience needed",
   },
   {
     title: "Build a Biosensor",
@@ -39,7 +39,7 @@ const BiotechWorkshops = () => {
   return (
     <ServicePageLayout
       title="Biotech Workshops"
-      subtitle="Become a scientist for a day — hands-on biotech experiences that make science tangible, exciting, and unforgettable."
+      subtitle="Become a scientist for a day. Hands-on biotech experiences that make science tangible, exciting, and unforgettable."
       overline="Hands-On Science"
     >
       {/* Coming soon banner */}
@@ -133,7 +133,7 @@ const BiotechWorkshops = () => {
       >
         <h2 className="font-display text-xl font-bold text-foreground mb-4">What to Expect</h2>
         <p className="font-body text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Real lab equipment. Real experiments. Real science — made accessible for everyone. 
+          Real lab equipment. Real experiments. Real science, made accessible for everyone. 
           No prior experience required for beginner workshops. Come curious, leave inspired.
         </p>
       </motion.div>

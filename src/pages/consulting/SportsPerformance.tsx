@@ -4,20 +4,20 @@ import { Link } from "react-router-dom";
 
 const sections = [
   {
-    title: "Wrestling Traditions — Biomechanics & Conditioning",
+    title: "Wrestling Traditions: Biomechanics & Conditioning",
     era: "Traditional Foundation",
     content: [
-      "West African wrestling (Laamb in Senegal, Lutte Traditionnelle across the Sahel) is one of the oldest organized sports on the continent, with traditions dating back centuries. Senegalese wrestlers undergo rigorous physical conditioning regimens that combine strength training, flexibility work, and spiritual preparation — a holistic approach that modern sports science is only now beginning to validate.",
-      "The training methods are biomechanically sophisticated: wrestlers practice explosive hip drives, rotational throws, and ground control techniques that develop functional strength across multiple planes of motion. Training camps (écuries) prescribe diets rich in millet porridge (thiéré), baobab fruit juice (bouye), and fermented milk (lait caillé) — foods now recognized for their high mineral content, complex carbohydrates, and probiotic benefits.",
-      "Traditional pre-fight rituals involve the application of gris-gris (amulets) and herbal preparations to the skin. While the spiritual dimensions are culturally specific, many of the plant extracts used — shea butter for joint lubrication, neem oil for anti-inflammatory properties, and eucalyptus preparations for respiratory opening — have documented pharmacological activity.",
+      "West African wrestling (Laamb in Senegal, Lutte Traditionnelle across the Sahel) is one of the oldest organized sports on the continent, with traditions dating back centuries. Senegalese wrestlers undergo rigorous physical conditioning regimens that combine strength training, flexibility work, and spiritual preparation. This holistic approach is something modern sports science is only now beginning to validate.",
+      "The training methods are biomechanically sophisticated: wrestlers practice explosive hip drives, rotational throws, and ground control techniques that develop functional strength across multiple planes of motion. Training camps (écuries) prescribe diets rich in millet porridge (thiéré), baobab fruit juice (bouye), and fermented milk (lait caillé). These foods are now recognized for their high mineral content, complex carbohydrates, and probiotic benefits.",
+      "Traditional pre-fight rituals involve the application of gris-gris (amulets) and herbal preparations to the skin. While the spiritual dimensions are culturally specific, many of the plant extracts used, like shea butter for joint lubrication, neem oil for anti-inflammatory properties, and eucalyptus preparations for respiratory opening, have documented pharmacological activity.",
     ],
   },
   {
-    title: "Long-Distance Running — Altitude Adaptation & Nutrition",
+    title: "Long-Distance Running: Altitude Adaptation & Nutrition",
     era: "Traditional Foundation",
     content: [
-      "East African distance running dominance — particularly among Kenyan Kalenjin and Ethiopian athletes — is one of the most studied phenomena in sports science. While genetics play a role (specific polymorphisms in the ACE gene and ACTN3 gene are more prevalent), the traditional lifestyle factors are equally significant: high-altitude living (2,000-2,500m), which naturally elevates hemoglobin and erythropoietin levels, and childhood patterns of running long distances to school.",
-      "Traditional diets in running communities center on ugali (maize meal), mursik (fermented milk from the Kalenjin), sukuma wiki (collard greens), and chai with high sugar content for energy. Nutritional analysis reveals these diets are naturally high in complex carbohydrates (70-75% of calories), moderate in protein, and rich in iron and B-vitamins — closely matching what modern sports nutrition recommends for endurance athletes.",
+      "East African distance running dominance, particularly among Kenyan Kalenjin and Ethiopian athletes, is one of the most studied phenomena in sports science. While genetics play a role (specific polymorphisms in the ACE gene and ACTN3 gene are more prevalent), the traditional lifestyle factors are equally significant: high-altitude living (2,000-2,500m), which naturally elevates hemoglobin and erythropoietin levels, and childhood patterns of running long distances to school.",
+      "Traditional diets in running communities center on ugali (maize meal), mursik (fermented milk from the Kalenjin), sukuma wiki (collard greens), and chai with high sugar content for energy. Nutritional analysis reveals these diets are naturally high in complex carbohydrates (70-75% of calories), moderate in protein, and rich in iron and B-vitamins. This closely matches what modern sports nutrition recommends for endurance athletes.",
       "The fermented milk tradition is particularly notable: mursik is fermented in gourds lined with charcoal from the cromwo tree (Senna didymobotrya), creating a probiotic-rich food with potential gut-microbiome benefits for nutrient absorption and immune function during intense training. BioCircuit's consulting practice helps sports brands understand and apply these ancestral nutritional strategies alongside modern microbiome science.",
     ],
   },
@@ -25,29 +25,29 @@ const sections = [
     title: "Herbal Medicine for Athletic Performance",
     era: "Traditional Foundation",
     content: [
-      "African ethnobotanical traditions contain a rich pharmacopeia of performance-enhancing plants — not in the banned-substance sense, but as natural adaptogens, anti-inflammatories, and recovery aids. Research published in Clinical Phytoscience (2025) and the Journal of Ethnopharmacology documents several traditionally used plants with scientifically validated effects:",
-      "Ashwagandha (Withania somnifera), used across East African traditional medicine, has been shown in randomized controlled trials to increase VO₂ max, improve muscular strength, and reduce exercise-induced cortisol levels. Moringa oleifera, widely consumed in West African communities, contains high concentrations of quercetin and chlorogenic acid — antioxidants that reduce exercise-induced oxidative stress and inflammation.",
-      "Devil's Claw (Harpagophytum procumbens), indigenous to Southern Africa, contains harpagoside — an iridoid glycoside with anti-inflammatory potency comparable to low-dose NSAIDs without gastrointestinal side effects. Rooibos (Aspalathus linearis) provides aspalathin, a unique flavonoid with demonstrated anti-oxidant and cardioprotective properties relevant to endurance athletes.",
-      "BioCircuit consults sports nutrition brands on developing evidence-based formulations inspired by African ethnobotany — ensuring proper dosing, bioavailability optimization (using liposomal delivery or cyclodextrin encapsulation), and rigorous quality control while honoring the traditional knowledge systems that identified these compounds.",
+      "African ethnobotanical traditions contain a rich pharmacopeia of performance-enhancing plants. Not in the banned-substance sense, but as natural adaptogens, anti-inflammatories, and recovery aids. Research published in Clinical Phytoscience (2025) and the Journal of Ethnopharmacology documents several traditionally used plants with scientifically validated effects:",
+      "Ashwagandha (Withania somnifera), used across East African traditional medicine, has been shown in randomized controlled trials to increase VO₂ max, improve muscular strength, and reduce exercise-induced cortisol levels. Moringa oleifera, widely consumed in West African communities, contains high concentrations of quercetin and chlorogenic acid, antioxidants that reduce exercise-induced oxidative stress and inflammation.",
+      "Devil's Claw (Harpagophytum procumbens), indigenous to Southern Africa, contains harpagoside, an iridoid glycoside with anti-inflammatory potency comparable to low-dose NSAIDs without gastrointestinal side effects. Rooibos (Aspalathus linearis) provides aspalathin, a unique flavonoid with demonstrated anti-oxidant and cardioprotective properties relevant to endurance athletes.",
+      "BioCircuit consults sports nutrition brands on developing evidence-based formulations inspired by African ethnobotany, ensuring proper dosing, bioavailability optimization (using liposomal delivery or cyclodextrin encapsulation), and rigorous quality control while honouring the traditional knowledge systems that identified these compounds.",
     ],
   },
   {
-    title: "Recovery & Regeneration — Traditional Bodywork",
+    title: "Recovery & Regeneration: Traditional Bodywork",
     era: "Traditional Foundation",
     content: [
-      "African healing traditions include sophisticated bodywork modalities that address musculoskeletal recovery. The Maasai practice of olmurrana (warrior-stage) body conditioning includes deep tissue manipulation, passive stretching, and the application of heated herbal compresses — techniques that parallel modern myofascial release, PNF stretching, and thermotherapy.",
-      "South African traditional healers (izinyanga) use steam baths (ukufutha) infused with medicinal plants — eucalyptus, wild garlic (Tulbaghia violacea), and African ginger (Siphonochilus aethiopicus) — for respiratory recovery and muscle relaxation. The active compounds in these plants (1,8-cineole from eucalyptus, allicin from garlic, and furanoterpenoids from African ginger) have demonstrated anti-inflammatory, bronchodilatory, and analgesic properties.",
-      "Our consulting practice helps wellness and sports recovery brands develop protocols that integrate these traditional modalities with modern recovery science: contrast therapy, pneumatic compression, and photobiomodulation — creating holistic recovery systems rooted in evidence from both traditions.",
+      "African healing traditions include sophisticated bodywork modalities that address musculoskeletal recovery. The Maasai practice of olmurrana (warrior-stage) body conditioning includes deep tissue manipulation, passive stretching, and the application of heated herbal compresses. These techniques parallel modern myofascial release, PNF stretching, and thermotherapy.",
+      "South African traditional healers (izinyanga) use steam baths (ukufutha) infused with medicinal plants like eucalyptus, wild garlic (Tulbaghia violacea), and African ginger (Siphonochilus aethiopicus) for respiratory recovery and muscle relaxation. The active compounds in these plants (1,8-cineole from eucalyptus, allicin from garlic, and furanoterpenoids from African ginger) have demonstrated anti-inflammatory, bronchodilatory, and analgesic properties.",
+      "Our consulting practice helps wellness and sports recovery brands develop protocols that integrate these traditional modalities with modern recovery science: contrast therapy, pneumatic compression, and photobiomodulation, creating holistic recovery systems rooted in evidence from both traditions.",
     ],
   },
   {
     title: "Biotech-Enhanced Performance Analytics",
     era: "Biotechnology Frontier",
     content: [
-      "Modern sports biotechnology offers tools that can quantify and optimize what traditional practices achieved intuitively. Wearable biosensors continuously monitor lactate threshold, muscle oxygenation (SmO₂), heart rate variability, and sweat electrolyte composition — providing real-time biofeedback that guides training intensity and recovery timing.",
-      "Microbiome profiling — analyzing the gut bacteria of athletes — reveals that elite endurance athletes harbor distinct microbial communities (particularly Veillonella atypica, which metabolizes exercise-produced lactate into propionate, a short-chain fatty acid that enhances endurance). Traditional fermented foods like mursik, ogi (fermented maize), and dawadawa may naturally cultivate beneficial athletic microbiomes.",
-      "Genomic and epigenomic analysis can identify individual variations in muscle fiber composition (slow-twitch vs. fast-twitch ratios), recovery capacity (inflammatory response genes), and injury susceptibility (collagen gene variants) — enabling truly personalized training programs. Combined with traditional conditioning wisdom, this creates a complete picture: ancestral knowledge tells us what works; biotechnology tells us why and for whom.",
-      "BioCircuit consults sports organizations, athletic brands, and performance centers on integrating biotechnology analytics with culturally-informed training methodologies — building performance systems that are both cutting-edge and deeply human.",
+      "Modern sports biotechnology offers tools that can quantify and optimize what traditional practices achieved intuitively. Wearable biosensors continuously monitor lactate threshold, muscle oxygenation (SmO₂), heart rate variability, and sweat electrolyte composition, providing real-time biofeedback that guides training intensity and recovery timing.",
+      "Microbiome profiling (analyzing the gut bacteria of athletes) reveals that elite endurance athletes harbour distinct microbial communities, particularly Veillonella atypica, which metabolizes exercise-produced lactate into propionate, a short-chain fatty acid that enhances endurance. Traditional fermented foods like mursik, ogi (fermented maize), and dawadawa may naturally cultivate beneficial athletic microbiomes.",
+      "Genomic and epigenomic analysis can identify individual variations in muscle fiber composition (slow-twitch vs. fast-twitch ratios), recovery capacity (inflammatory response genes), and injury susceptibility (collagen gene variants), enabling truly personalized training programs. Combined with traditional conditioning wisdom, this creates a complete picture: ancestral knowledge tells us what works; biotechnology tells us why and for whom.",
+      "BioCircuit consults sports organizations, athletic brands, and performance centers on integrating biotechnology analytics with culturally-informed training methodologies, building performance systems that are both cutting-edge and deeply human.",
     ],
   },
 ];
@@ -76,7 +76,7 @@ const SportsPerformance = () => {
             Sports & <span className="text-gradient-primary">Performance</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="font-body text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            African athletic traditions — from Senegalese wrestling to East African endurance running — contain performance wisdom that modern sports science is only beginning to decode. We bridge ancestral conditioning with biotech analytics.
+            African athletic traditions, from Senegalese wrestling to East African endurance running, contain performance wisdom that modern sports science is only beginning to decode. We bridge ancestral conditioning with biotech analytics.
           </motion.p>
         </div>
       </section>

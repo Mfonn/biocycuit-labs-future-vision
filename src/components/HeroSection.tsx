@@ -75,8 +75,8 @@ const HeroSection = () => {
           transition={{ delay: 1, duration: 0.8 }}
           className="font-body text-base sm:text-lg text-muted-foreground/70 max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          Pioneering the fusion of biotechnology and holistic wellness — 
-          from water research to machine learning, we're building the future of health.
+          We blend biotechnology with holistic wellness. From water research 
+          to machine learning, we're building the future of health.
         </motion.p>
 
         {/* CTA Buttons */}

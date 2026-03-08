@@ -4,48 +4,48 @@ import { Link } from "react-router-dom";
 
 const sections = [
   {
-    title: "Barkcloth — The Original Sustainable Textile",
+    title: "Barkcloth: The Original Sustainable Textile",
     era: "Traditional Foundation",
     content: [
-      "Barkcloth (olubugo) is one of Africa's oldest textile technologies, produced by the Baganda people of Uganda for over 600 years. Harvested from the inner bark of the Mutuba tree (Ficus natalensis), barkcloth is made by repeatedly beating the bark with wooden mallets until it becomes soft, supple, and fabric-like — all without killing the tree. The bark regenerates annually, making it one of the earliest examples of sustainable, renewable textile production.",
-      "Barkcloth served multiple ceremonial and practical purposes: it was worn by royalty during coronations, used as burial shrouds, draped during wedding ceremonies, and fashioned into garments for warriors. Its terracotta color and organic texture carried cultural significance — different treatments and patterns indicated social status, clan affiliation, and spiritual protection.",
-      "In 2005, UNESCO recognized Ugandan barkcloth making as an Intangible Cultural Heritage of Humanity. Today, designers are rediscovering barkcloth as a zero-chemical, biodegradable alternative to synthetic fabrics — a material that was sustainable before sustainability had a name.",
+      "Barkcloth (olubugo) is one of Africa's oldest textile technologies, produced by the Baganda people of Uganda for over 600 years. Harvested from the inner bark of the Mutuba tree (Ficus natalensis), barkcloth is made by repeatedly beating the bark with wooden mallets until it becomes soft, supple, and fabric-like, all without killing the tree. The bark regenerates annually, making it one of the earliest examples of sustainable, renewable textile production.",
+      "Barkcloth served multiple ceremonial and practical purposes: it was worn by royalty during coronations, used as burial shrouds, draped during wedding ceremonies, and fashioned into garments for warriors. Its terracotta color and organic texture carried cultural significance. Different treatments and patterns indicated social status, clan affiliation, and spiritual protection.",
+      "In 2005, UNESCO recognized Ugandan barkcloth making as an Intangible Cultural Heritage of Humanity. Today, designers are rediscovering barkcloth as a zero-chemical, biodegradable alternative to synthetic fabrics. It was sustainable before sustainability had a name.",
     ],
   },
   {
-    title: "Bogolanfini (Mud Cloth) — Biochemistry in Pattern",
+    title: "Bogolanfini (Mud Cloth): Biochemistry in Pattern",
     era: "Traditional Foundation",
     content: [
-      "Bogolanfini — literally 'earth cloth' — is a Malian textile tradition dating back to at least the 12th century. The process is a masterclass in natural biochemistry: handspun cotton is soaked in a bath of n'galama tree leaves (Anogeissus leiocarpa), which deposits tannins into the fibers. Fermented river mud, rich in iron oxide, is then painted onto the fabric in intricate patterns. The iron in the mud reacts with the tannins through a chelation reaction, forming a permanent, washfast dark pigment.",
-      "This is not folk art — it is applied chemistry. The mordanting (tannin fixation), iron-oxide reaction, and sun-bleaching steps mirror industrial dyeing processes but use entirely biological reagents. Mud cloth patterns were historically encoded with meaning: specific motifs indicated a warrior's bravery, a woman's marital status, or protective spiritual symbols worn during battle.",
+      "Bogolanfini, literally 'earth cloth,' is a Malian textile tradition dating back to at least the 12th century. The process is a masterclass in natural biochemistry: handspun cotton is soaked in a bath of n'galama tree leaves (Anogeissus leiocarpa), which deposits tannins into the fibers. Fermented river mud, rich in iron oxide, is then painted onto the fabric in intricate patterns. The iron in the mud reacts with the tannins through a chelation reaction, forming a permanent, washfast dark pigment.",
+      "This is not folk art. It is applied chemistry. The mordanting (tannin fixation), iron-oxide reaction, and sun-bleaching steps mirror industrial dyeing processes but use entirely biological reagents. Mud cloth patterns were historically encoded with meaning: specific motifs indicated a warrior's bravery, a woman's marital status, or protective spiritual symbols worn during battle.",
       "BioCircuit's consulting practice helps fashion brands reverse-engineer these biochemical dyeing processes, optimize them for scale using fermentation biotechnology, and develop new bio-based colorants inspired by the chelation chemistry that Malian artisans perfected centuries ago.",
     ],
   },
   {
-    title: "Kente — Engineering in Thread",
+    title: "Kente: Engineering in Thread",
     era: "Traditional Foundation",
     content: [
-      "Kente cloth, originating from the Ashanti and Ewe peoples of Ghana and Togo, is one of the most technically complex textiles ever produced by hand. Woven on narrow-strip looms, kente involves the precise interlocking of warp and weft threads in mathematical patterns — each strip is typically 4 inches wide and must be joined edge-to-edge to create larger cloths with perfectly aligned geometric designs.",
-      "The weaving patterns encode information: specific color combinations and geometric arrangements carry names and proverbs. Gold represents royalty and wealth (associated with the Ashanti monarchy), blue represents peace and harmony, green represents growth and renewal. The cloth was historically reserved for sacred ceremonies — enstoolment of chiefs, religious festivals, and rites of passage.",
-      "From a biotechnology perspective, kente's precision weaving anticipates modern textile engineering principles: controlled fiber orientation, repeating unit cells, and hierarchical structure. Our consulting work explores how bio-fabricated fibers — spider silk proteins, cellulose nanofibers, and mycelium-based textiles — can be woven using kente-inspired patterns, merging ancestral engineering with synthetic biology.",
+      "Kente cloth, originating from the Ashanti and Ewe peoples of Ghana and Togo, is one of the most technically complex textiles ever produced by hand. Woven on narrow-strip looms, kente involves the precise interlocking of warp and weft threads in mathematical patterns. Each strip is typically 4 inches wide and must be joined edge-to-edge to create larger cloths with perfectly aligned geometric designs.",
+      "The weaving patterns encode information: specific color combinations and geometric arrangements carry names and proverbs. Gold represents royalty and wealth (associated with the Ashanti monarchy), blue represents peace and harmony, green represents growth and renewal. The cloth was historically reserved for sacred ceremonies like enstoolment of chiefs, religious festivals, and rites of passage.",
+      "From a biotechnology perspective, kente's precision weaving anticipates modern textile engineering principles: controlled fiber orientation, repeating unit cells, and hierarchical structure. Our consulting work explores how bio-fabricated fibers (spider silk proteins, cellulose nanofibers, and mycelium-based textiles) can be woven using kente-inspired patterns, merging ancestral engineering with synthetic biology.",
     ],
   },
   {
-    title: "Bio-Fabricated Materials — The Future",
+    title: "Bio-Fabricated Materials: The Future",
     era: "Biotechnology Frontier",
     content: [
       "Modern biotechnology is producing materials that would have been recognizable to African textile ancestors: grown, not manufactured. Mycelium leather (from companies like Bolt Threads and MycoWorks) grows fungal networks into leather-like sheets. Bacterial cellulose, produced by Acetobacter xylinum, self-assembles into strong, flexible films. Recombinant spider silk proteins, expressed in engineered yeast or bacteria, produce fibers with tensile strength exceeding steel.",
       "These bio-fabricated materials share a philosophy with traditional African textiles: they work with biological processes rather than against them. Barkcloth grows on trees; mycelium leather grows in trays. Mud cloth uses fermentation chemistry; bacterial cellulose is a fermentation product. The through-line is biological manufacturing.",
-      "BioCircuit Laboratories consults fashion brands on integrating these materials into their supply chains — from fiber selection and bio-fabrication protocol design to scaling production. We also develop hybrid approaches: bio-dyed textiles using optimized versions of traditional African dyeing chemistries, structural textiles inspired by kente weaving mathematics, and sustainable packaging derived from barkcloth processing techniques.",
+      "BioCircuit Laboratories consults fashion brands on integrating these materials into their supply chains, from fiber selection and bio-fabrication protocol design to scaling production. We also develop hybrid approaches: bio-dyed textiles using optimized versions of traditional African dyeing chemistries, structural textiles inspired by kente weaving mathematics, and sustainable packaging derived from barkcloth processing techniques.",
     ],
   },
   {
     title: "Smart Textiles & Wearable Biosensors",
     era: "Biotechnology Frontier",
     content: [
-      "The next frontier merges African textile artistry with wearable biotechnology. Smart textiles incorporate biosensors — conductive fibers, piezoelectric elements, or biological sensing components — directly into fabric. These garments can monitor heart rate, hydration, muscle activation, and even biochemical markers in sweat.",
-      "Traditional African garments were already 'smart' in a cultural sense — mud cloth patterns communicated identity and status, barkcloth treatment indicated ceremony type. We envision textiles that are smart in both senses: culturally meaningful patterns woven from bio-sensing fibers, garments that honor ancestral design while monitoring the wearer's health.",
-      "Our consulting services help sportswear brands, fashion houses, and health-tech companies design wearable biosensor textiles — from fiber-level engineering to garment construction — drawing on both cutting-edge bioelectronics and the deep textile intelligence of African traditions.",
+      "The next frontier merges African textile artistry with wearable biotechnology. Smart textiles incorporate biosensors like conductive fibers, piezoelectric elements, or biological sensing components directly into fabric. These garments can monitor heart rate, hydration, muscle activation, and even biochemical markers in sweat.",
+      "Traditional African garments were already 'smart' in a cultural sense. Mud cloth patterns communicated identity and status, barkcloth treatment indicated ceremony type. We envision textiles that are smart in both senses: culturally meaningful patterns woven from bio-sensing fibers, garments that honour ancestral design while monitoring the wearer's health.",
+      "Our consulting services help sportswear brands, fashion houses, and health-tech companies design wearable biosensor textiles, from fiber-level engineering to garment construction, drawing on both cutting-edge bioelectronics and the deep textile intelligence of African traditions.",
     ],
   },
 ];
@@ -83,7 +83,7 @@ const FashionTextiles = () => {
             Fashion & <span className="text-gradient-primary">Textiles</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="font-body text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            From barkcloth and mud cloth to mycelium leather and biosensor garments — African textile traditions pioneered sustainable, biologically-integrated fabrication centuries before modern biotech. We bridge both worlds.
+            From barkcloth and mud cloth to mycelium leather and biosensor garments, African textile traditions pioneered sustainable, biologically-integrated fabrication centuries before modern biotech. We bridge both worlds.
           </motion.p>
         </div>
       </section>
@@ -127,7 +127,7 @@ const FashionTextiles = () => {
       <section className="py-16 px-6 border-t border-border/50">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-display text-xl font-bold text-foreground mb-4">Ready to Weave the Future?</h2>
-          <p className="font-body text-muted-foreground mb-6">Whether you're a fashion brand, textile innovator, or cultural institution — let's explore what biotechnology and tradition can build together.</p>
+          <p className="font-body text-muted-foreground mb-6">Whether you're a fashion brand, textile innovator, or cultural institution, let's explore what biotechnology and tradition can build together.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="mailto:Biocircuitlaboratories@gmail.com?subject=Fashion & Textiles Consulting" className="px-8 py-4 rounded-lg font-display text-sm tracking-wider uppercase bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-shadow duration-500">
               Start a Conversation

@@ -6,42 +6,42 @@ const services = [
   {
     icon: Microscope,
     title: "Research",
-    description: "Explore our published and ongoing research — from biopsychiatry and water science to bioelectronics and mathematical biology.",
+    description: "Explore our published and ongoing research, from biopsychiatry and water science to bioelectronics and mathematical biology.",
     status: "active",
     href: "/research",
   },
   {
     icon: Cpu,
     title: "Biotechnology Consulting",
-    description: "Infusing biotechnology into your fashion, architecture, and sports — bridging organic systems with modern industry.",
+    description: "We bring biotechnology into your fashion, architecture, and sports, connecting organic systems with modern industry.",
     status: "active",
     href: "/biotechnology-consulting",
   },
   {
     icon: GraduationCap,
     title: "Education",
-    description: "Check out our refreshing courses — reimagining how we learn about biology, technology, and the systems that connect them.",
+    description: "Check out our courses. We're reimagining how people learn about biology, technology, and the systems that connect them.",
     status: "active",
     href: "/education",
   },
   {
     icon: ShoppingBag,
     title: "Shop",
-    description: "Checkout our virtual store — curated tools and resources for the modern biohacker and wellness enthusiast.",
+    description: "Visit our virtual store with curated tools and resources for the modern biohacker and wellness enthusiast.",
     status: "coming-soon",
     href: "/shop",
   },
   {
     icon: FlaskConical,
     title: "Biotech Workshops",
-    description: "Become a scientist for a day with hands-on biotech fun — immersive experiences that make science tangible.",
+    description: "Become a scientist for a day with hands-on biotech experiences that make science tangible and fun.",
     status: "coming-soon",
     href: "/biotech-workshops",
   },
   {
     icon: Database,
     title: "Machine Learning Data",
-    description: "Access datasets powering the next generation of biological insights — open data for open science.",
+    description: "Access datasets powering the next generation of biological insights. Open data for open science.",
     status: "active",
     href: "/machine-learning-data",
   },
@@ -79,8 +79,8 @@ const ServicesSection = () => {
             Our Services
           </h2>
           <p className="font-body text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-            At the intersection of ancient wellness wisdom and cutting-edge technology, 
-            we offer pathways to understand and enhance biological systems.
+            We sit at the intersection of ancient wellness wisdom and modern technology, 
+            offering pathways to understand and enhance biological systems.
           </p>
         </motion.div>
 

@@ -8,28 +8,28 @@ const areas = [
     icon: Shirt,
     title: "Fashion & Textiles",
     href: "/consulting/fashion-textiles",
-    description: "From barkcloth and mud cloth to mycelium leather and biosensor garments — we bridge African textile traditions with cutting-edge bio-fabrication.",
+    description: "From barkcloth and mud cloth to mycelium leather and biosensor garments, we bridge African textile traditions with cutting-edge bio-fabrication.",
     examples: ["Barkcloth & bio-fabricated materials", "Mud cloth biochemistry at scale", "Smart textiles & wearable biosensors"],
   },
   {
     icon: Building2,
     title: "Architecture & Design",
     href: "/consulting/architecture-design",
-    description: "From Great Zimbabwe's dry-stone masonry to self-healing bio-concrete — African building traditions solved problems modern architecture still struggles with.",
+    description: "From Great Zimbabwe's dry-stone masonry to self-healing bio-concrete, African building traditions solved problems modern architecture still struggles with.",
     examples: ["Rammed earth & bio-cemented structures", "Termite mound biomimicry (passive HVAC)", "Mycelium insulation & living facades"],
   },
   {
     icon: Dumbbell,
     title: "Sports & Performance",
     href: "/consulting/sports-performance",
-    description: "African athletic traditions contain performance wisdom modern sports science is only now decoding — from Senegalese wrestling conditioning to East African endurance nutrition.",
+    description: "African athletic traditions contain performance wisdom modern sports science is only now decoding, from Senegalese wrestling conditioning to East African endurance nutrition.",
     examples: ["Ethnobotanical performance formulations", "Microbiome-informed nutrition", "Biotech-enhanced analytics"],
   },
   {
     icon: Microscope,
     title: "Research & Development",
     href: "/consulting/research-development",
-    description: "For technology companies that want to withstand the biological century — bridging digital engineering with synthetic biology, biosensors, and bio-manufacturing.",
+    description: "For technology companies that want to withstand the biological century, bridging digital engineering with synthetic biology, biosensors, and bio-manufacturing.",
     examples: ["Biotech resilience audits", "Synthetic biology strategy", "Bio-digital integration"],
   },
 ];
@@ -38,7 +38,7 @@ const BiotechnologyConsulting = () => {
   return (
     <ServicePageLayout
       title="Biotechnology Consulting"
-      subtitle="Infusing biotechnology into fashion, architecture, sports, and R&D — bridging African traditional methods with cutting-edge biological science."
+      subtitle="We bring biotechnology into fashion, architecture, sports, and R&D, bridging African traditional methods with cutting-edge biological science."
       overline="Consulting Services"
     >
       {/* Areas grid */}
@@ -97,7 +97,7 @@ const BiotechnologyConsulting = () => {
           {[
             { step: "01", title: "Discovery", desc: "We learn about your industry, goals, and where biology can create impact." },
             { step: "02", title: "Strategy", desc: "We develop a custom biotech integration plan tailored to your specific needs." },
-            { step: "03", title: "Implementation", desc: "We guide you through execution — from lab work to production-ready solutions." },
+            { step: "03", title: "Implementation", desc: "We guide you through execution, from lab work to production-ready solutions." },
           ].map((item, i) => (
             <motion.div
               key={item.step}
