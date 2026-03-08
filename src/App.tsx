@@ -22,6 +22,7 @@ import ResearchDevelopment from "./pages/consulting/ResearchDevelopment";
 import CourseDetail from "./pages/CourseDetail";
 import CourseLearn from "./pages/CourseLearn";
 import CourseCertificate from "./pages/CourseCertificate";
+import Obsidian from "./pages/Obsidian";
 
 const queryClient = new QueryClient();
 
