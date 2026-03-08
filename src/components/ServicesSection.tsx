@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import { Droplets, Cpu, GraduationCap, ShoppingBag, FlaskConical, Database } from "lucide-react";
+import { Microscope, Cpu, GraduationCap, ShoppingBag, FlaskConical, Database } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
   {
-    icon: Droplets,
-    title: "Research On Water",
-    description: "Checkout & contribute to our on-going water research — exploring the molecular architecture of life's most essential element.",
+    icon: Microscope,
+    title: "Research",
+    description: "Explore our published and ongoing research — from biopsychiatry and water science to bioelectronics and mathematical biology.",
     status: "active",
-    href: "/research-on-water",
+    href: "/research",
   },
   {
     icon: Cpu,
