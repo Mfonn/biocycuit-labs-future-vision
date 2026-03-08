@@ -26,7 +26,7 @@ const datasets = [
   },
   {
     title: "Biotechnology Industry Trends",
-    description: "Scraped and curated dataset of biotech industry news, patent filings, and research papers — structured for NLP and trend analysis.",
+    description: "Scraped and curated dataset of biotech industry news, patent filings, and research papers, structured for NLP and trend analysis.",
     size: "800 MB",
     format: "JSON",
     access: "Open",
@@ -37,7 +37,7 @@ const MachineLearningData = () => {
   return (
     <ServicePageLayout
       title="Machine Learning Data"
-      subtitle="Access curated datasets powering the next generation of biological insights — open data for open science."
+      subtitle="Access curated datasets powering the next generation of biological insights. Open data for open science."
       overline="Data & ML"
     >
       {/* Stats */}

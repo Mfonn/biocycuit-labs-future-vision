@@ -6,25 +6,25 @@ const offerings = [
   {
     icon: Shield,
     title: "Biotech Resilience Audits",
-    description: "We assess your company's vulnerability to biological disruption — supply chain dependencies on biological materials, exposure to biosecurity risks, and opportunities to integrate biological manufacturing. The audit produces a roadmap for building biological resilience into your operations.",
+    description: "We assess your company's vulnerability to biological disruption: supply chain dependencies on biological materials, exposure to biosecurity risks, and opportunities to integrate biological manufacturing. The audit produces a roadmap for building biological resilience into your operations.",
     deliverables: ["Biological supply chain risk assessment", "Biosecurity threat modeling", "Bio-integration opportunity map", "12-month resilience roadmap"],
   },
   {
     icon: Dna,
     title: "Synthetic Biology Strategy",
-    description: "For companies exploring engineered biological systems — from bio-manufactured materials and enzymes to living sensors and cell-based computing. We provide strategic guidance on which synthetic biology approaches align with your business goals, and connect you with lab infrastructure and talent.",
+    description: "For companies exploring engineered biological systems, from bio-manufactured materials and enzymes to living sensors and cell-based computing. We provide strategic guidance on which synthetic biology approaches align with your business goals, and connect you with lab infrastructure and talent.",
     deliverables: ["Synbio application feasibility study", "Technology landscape analysis", "Lab partner matching", "IP strategy for biological inventions"],
   },
   {
     icon: Cpu,
     title: "Bio-Digital Integration",
-    description: "The convergence of biological and digital systems — biosensors feeding data to ML models, biological computing substrates, DNA data storage, and organ-on-chip platforms. We consult technology companies on where biology can augment or replace digital infrastructure.",
+    description: "The convergence of biological and digital systems: biosensors feeding data to ML models, biological computing substrates, DNA data storage, and organ-on-chip platforms. We consult technology companies on where biology can augment or replace digital infrastructure.",
     deliverables: ["Bio-digital convergence assessment", "Biosensor integration architecture", "Biological computing feasibility", "Prototype specification"],
   },
   {
     icon: TrendingUp,
     title: "Bioeconomy Positioning",
-    description: "The global bioeconomy is projected to reach $30 trillion by 2050. We help companies position for this transition — identifying where biological manufacturing, bio-based materials, and circular bio-processes can create competitive advantage and new revenue streams.",
+    description: "The global bioeconomy is projected to reach $30 trillion by 2050. We help companies position for this transition by identifying where biological manufacturing, bio-based materials, and circular bio-processes can create competitive advantage and new revenue streams.",
     deliverables: ["Bioeconomy market analysis", "Competitive positioning strategy", "Bio-circular business model design", "Investment and partnership strategy"],
   },
 ];
@@ -33,14 +33,14 @@ const sections = [
   {
     title: "Why Biotech R&D Now",
     content: [
-      "The biological century is not a prediction — it is already underway. CRISPR gene editing costs have dropped 99% in a decade. Synthetic biology tools allow engineering organisms with the same precision we engineer software. Bio-manufactured materials (spider silk, mycelium composites, lab-grown leather) are entering commercial production. Companies that ignore this shift risk obsolescence; those that embrace it gain first-mover advantage in markets that will define the next fifty years.",
+      "The biological century is not a prediction. It is already underway. CRISPR gene editing costs have dropped 99% in a decade. Synthetic biology tools allow engineering organisms with the same precision we engineer software. Bio-manufactured materials (spider silk, mycelium composites, lab-grown leather) are entering commercial production. Companies that ignore this shift risk obsolescence; those that embrace it gain first-mover advantage in markets that will define the next fifty years.",
       "But most technology companies lack biological expertise. Their engineering teams think in silicon, not cells. Their supply chains are built on petrochemical materials. Their R&D processes assume deterministic manufacturing, not the probabilistic, adaptive nature of biological systems. This gap is where BioCircuit's R&D consulting creates value.",
     ],
   },
   {
     title: "Our Approach",
     content: [
-      "We don't just advise — we embed. BioCircuit R&D consultants work alongside your engineering and product teams, translating between biological and digital domains. We bring laboratory expertise (wet lab, computational biology, bioinformatics), strategic clarity (which biological approaches are commercially viable vs. scientifically interesting but premature), and network access (academic labs, biotech startups, contract research organizations).",
+      "We don't just advise. We embed. BioCircuit R&D consultants work alongside your engineering and product teams, translating between biological and digital domains. We bring laboratory expertise (wet lab, computational biology, bioinformatics), strategic clarity (which biological approaches are commercially viable vs. scientifically interesting but premature), and network access (academic labs, biotech startups, contract research organizations).",
       "Our consulting is structured around 90-day cycles: Discovery (mapping your biological opportunity space), Strategy (selecting and designing the approach), and Execution (building prototypes, running experiments, generating data). Each cycle produces deliverables, not just recommendations.",
     ],
   },
@@ -48,7 +48,7 @@ const sections = [
     title: "Case Applications",
     content: [
       "A materials company exploring mycelium-based packaging to replace expanded polystyrene. A wearable tech startup integrating sweat-based biosensors into athletic garments. A construction firm developing self-healing bio-concrete for infrastructure projects. An agricultural technology company using machine learning on microbiome data to optimize soil health. A fashion brand transitioning from petroleum-based synthetic fibers to bio-fabricated alternatives.",
-      "Each of these represents a technology company that recognized biology as its next competitive frontier — and needed a partner who could bridge the gap between their existing engineering capabilities and the biological systems they wanted to harness.",
+      "Each of these represents a technology company that recognized biology as its next competitive frontier and needed a partner who could bridge the gap between their existing engineering capabilities and the biological systems they wanted to harness.",
     ],
   },
 ];
@@ -77,7 +77,7 @@ const ResearchDevelopment = () => {
             Research & <span className="text-gradient-primary">Development</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="font-body text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            For technology companies that want to withstand — and shape — the biological century. We bridge digital engineering and biological systems to build R&D capabilities that compound over time.
+            For technology companies that want to withstand and shape the biological century. We bridge digital engineering and biological systems to build R&D capabilities that compound over time.
           </motion.p>
         </div>
       </section>

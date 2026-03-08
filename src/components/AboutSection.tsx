@@ -5,17 +5,17 @@ const pillars = [
   {
     icon: Dna,
     title: "Bio-Innovation",
-    description: "Harnessing biological systems and synthetic biology to create solutions that work in harmony with nature.",
+    description: "We use biological systems and synthetic biology to create solutions that work in harmony with nature.",
   },
   {
     icon: Zap,
     title: "Technology",
-    description: "Leveraging machine learning, data science, and digital tools to decode the complexity of living systems.",
+    description: "We use machine learning, data science, and digital tools to decode the complexity of living systems.",
   },
   {
     icon: Leaf,
     title: "Traditional Wellness",
-    description: "Honoring ancestral knowledge and holistic health practices — integrating time-tested wisdom with modern science.",
+    description: "We honour ancestral knowledge and holistic health practices, integrating time-tested wisdom with modern science.",
   },
 ];
 
@@ -45,13 +45,13 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
               <p>
-                BioCircuit Laboratories exists at the frontier where biotechnology meets traditional wellness. 
+                BioCircuit Laboratories sits at the frontier where biotechnology meets traditional wellness. 
                 We believe that the deepest innovations come from understanding the circuits already running 
                 inside every living thing.
               </p>
               <p>
                 From researching the fundamental properties of water to consulting brands on how 
-                biotechnology can transform fashion, architecture, and athletics — we operate 
+                biotechnology can transform fashion, architecture, and athletics, we work 
                 across disciplines because biology doesn't respect boundaries.
               </p>
               <p>

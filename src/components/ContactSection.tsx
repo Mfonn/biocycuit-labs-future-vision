@@ -40,8 +40,8 @@ const ContactSection = () => {
             <span className="text-gradient-primary">Together</span>
           </h2>
           <p className="font-body text-lg text-muted-foreground max-w-xl mx-auto mb-12 leading-relaxed">
-            Whether you're a researcher, a brand, an educator, or simply curious about the biology
-            of tomorrow — we'd love to connect.
+            Whether you're a researcher, a brand, an educator, or just curious about the biology
+            of tomorrow, we'd love to connect.
           </p>
         </motion.div>
 

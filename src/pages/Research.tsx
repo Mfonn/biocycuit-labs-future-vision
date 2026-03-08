@@ -10,7 +10,7 @@ const researchProjects = [
     slug: "/research/autism-neurodivergence",
     field: "Biopsychiatry",
     status: "Published",
-    description: "An investigation into autism spectrum conditions through a biopsychiatric lens — examining neurological architecture, sensory processing, and the neurodiversity paradigm.",
+    description: "An investigation into autism spectrum conditions through a biopsychiatric lens, examining neurological architecture, sensory processing, and the neurodiversity paradigm.",
     tags: ["Neuroscience", "Biopsychiatry", "Sensory Processing", "Neurodiversity"],
   },
   {
@@ -28,7 +28,7 @@ const researchProjects = [
     slug: "/research/numerology",
     field: "Mathematical Biology",
     status: "In Progress",
-    description: "Exploring the intersection of numerical patterns, mathematical resonance, and biological systems — investigating whether numeric relationships map onto natural phenomena.",
+    description: "Exploring the intersection of numerical patterns, mathematical resonance, and biological systems, investigating whether numeric relationships map onto natural phenomena.",
     tags: ["Number Theory", "Pattern Recognition", "Mathematical Biology", "Systems Theory"],
   },
   {
@@ -37,7 +37,7 @@ const researchProjects = [
     slug: "/research/mycelium-electrode-arrays",
     field: "Bioelectronics",
     status: "Published",
-    description: "Investigating fungal mycelium networks as living multi-electrode arrays — biological computing substrates that sense, process, and transmit electrical signals.",
+    description: "Investigating fungal mycelium networks as living multi-electrode arrays: biological computing substrates that sense, process, and transmit electrical signals.",
     tags: ["Mycelium", "Bioelectronics", "MEA", "Fungal Networks", "Biosensors"],
   },
 ];
@@ -46,7 +46,7 @@ const Research = () => {
   return (
     <ServicePageLayout
       title="Research"
-      subtitle="Our published and ongoing research — spanning biopsychiatry, molecular biology, bioelectronics, and mathematical systems. Science made open, rigorous, and alive."
+      subtitle="Our published and ongoing research, spanning biopsychiatry, molecular biology, bioelectronics, and mathematical systems. Science made open, rigorous, and alive."
       overline="BioCircuit Research Division"
     >
       {/* Research projects */}
@@ -128,7 +128,7 @@ const Research = () => {
           Want to Contribute?
         </h2>
         <p className="font-body text-muted-foreground max-w-lg mx-auto mb-6">
-          BioCircuit research is open. If you're a researcher, student, or curious mind — 
+          BioCircuit research is open. If you're a researcher, student, or curious mind, 
           we welcome contributions, peer review, and collaboration.
         </p>
         <a
