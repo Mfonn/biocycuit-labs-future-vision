@@ -1,4 +1,5 @@
 import { Youtube, Instagram, Newspaper } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const socialLinks = [
   {
