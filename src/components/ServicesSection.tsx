@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Droplets, Cpu, GraduationCap, ShoppingBag, FlaskConical, Database } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -7,36 +8,42 @@ const services = [
     title: "Research On Water",
     description: "Checkout & contribute to our on-going water research — exploring the molecular architecture of life's most essential element.",
     status: "active",
+    href: "/research-on-water",
   },
   {
     icon: Cpu,
     title: "Biotechnology Consulting",
     description: "Infusing biotechnology into your fashion, architecture, and sports — bridging organic systems with modern industry.",
     status: "active",
+    href: "/biotechnology-consulting",
   },
   {
     icon: GraduationCap,
     title: "Education",
     description: "Check out our refreshing courses — reimagining how we learn about biology, technology, and the systems that connect them.",
     status: "active",
+    href: "/education",
   },
   {
     icon: ShoppingBag,
     title: "Shop",
     description: "Checkout our virtual store — curated tools and resources for the modern biohacker and wellness enthusiast.",
     status: "coming-soon",
+    href: "/shop",
   },
   {
     icon: FlaskConical,
     title: "Biotech Workshops",
     description: "Become a scientist for a day with hands-on biotech fun — immersive experiences that make science tangible.",
     status: "coming-soon",
+    href: "/biotech-workshops",
   },
   {
     icon: Database,
     title: "Machine Learning Data",
     description: "Access datasets powering the next generation of biological insights — open data for open science.",
     status: "active",
+    href: "/machine-learning-data",
   },
 ];
 
@@ -55,11 +62,9 @@ const cardVariants = {
 const ServicesSection = () => {
   return (
     <section id="services" className="relative py-32 px-6 overflow-hidden">
-      {/* Background accent */}
       <div className="absolute top-0 left-0 right-0 h-px line-glow opacity-50" />
 
       <div className="max-w-7xl mx-auto">
-        {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +84,6 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        {/* Services grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -88,37 +92,37 @@ const ServicesSection = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {services.map((service) => (
-            <motion.div
-              key={service.title}
-              variants={cardVariants}
-              className="group relative rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 transition-all duration-500 hover:glow-border cursor-pointer overflow-hidden"
-            >
-              {/* Hover shimmer */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-shimmer" />
+            <motion.div key={service.title} variants={cardVariants}>
+              <Link
+                to={service.href}
+                className="group relative block rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 transition-all duration-500 hover:glow-border cursor-pointer overflow-hidden h-full"
+              >
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-shimmer" />
 
-              <div className="relative z-10">
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-500">
-                  <service.icon size={24} className="text-primary" />
-                </div>
+                <div className="relative z-10">
+                  <div className="w-14 h-14 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-500">
+                    <service.icon size={24} className="text-primary" />
+                  </div>
 
-                {/* Status badge */}
-                {service.status === "coming-soon" && (
-                  <span className="inline-block text-[10px] tracking-[0.2em] uppercase px-3 py-1 rounded-full border border-bio-warm/30 text-bio-warm bg-bio-warm/5 mb-4 font-body">
-                    Coming Soon
+                  {service.status === "coming-soon" && (
+                    <span className="inline-block text-[10px] tracking-[0.2em] uppercase px-3 py-1 rounded-full border border-bio-warm/30 text-bio-warm bg-bio-warm/5 mb-4 font-body">
+                      Coming Soon
+                    </span>
+                  )}
+
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                    {service.title}
+                  </h3>
+
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  <span className="inline-flex items-center gap-1 mt-4 text-xs text-primary font-display tracking-wider uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    Explore →
                   </span>
-                )}
-
-                {/* Title */}
-                <h3 className="font-display text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </motion.div>
