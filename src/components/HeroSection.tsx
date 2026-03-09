@@ -39,7 +39,7 @@ const HeroSection = () => {
           
           <div className="h-px w-12 line-glow" />
           <span className="text-xs tracking-[0.4em] uppercase text-muted-foreground font-body">
-
+            WELLNESS   TECHNOLOGY
           </span>
           <div className="h-px w-12 line-glow" />
         </motion.div>

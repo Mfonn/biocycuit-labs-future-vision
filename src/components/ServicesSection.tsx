@@ -6,7 +6,7 @@ const services = [
   {
     icon: Microscope,
     title: "Research",
-    description: "Explore our published and ongoing research, from biopsychiatry and water science to bioelectronics and mathematical biology.",
+    description: "Explore our published and ongoing research",
     status: "active",
     href: "/research",
   },
