@@ -1,14 +1,34 @@
 import { motion } from "framer-motion";
-import { HeartPulse, TrendingUp, BarChart3, Cloud, Shield, Briefcase } from "lucide-react";
+import { Dna, Zap, Leaf } from "lucide-react";
+
+const pillars = [
+  {
+    icon: Dna,
+    title: "Bio-Innovation",
+    description: "We use biological systems and synthetic biology to create solutions that work in harmony with nature.",
+  },
+  {
+    icon: Zap,
+    title: "Technology",
+    description: "We use machine learning, data science, and digital tools to decode the complexity of living systems.",
+  },
+  {
+    icon: Leaf,
+    title: "Traditional Wellness",
+    description: "We honour ancestral knowledge and holistic health practices, integrating time-tested wisdom with modern science.",
+  },
+];
 
 const AboutSection = () => {
   return (
-    <section id="about" className="relative py-28 px-6 overflow-hidden">
+    <section id="about" className="relative py-32 px-6 overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-mesh opacity-50" />
       <div className="absolute top-0 left-0 right-0 h-px line-glow opacity-50" />
 
       <div className="relative max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left: Text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -19,44 +39,55 @@ const AboutSection = () => {
               Who We Are
             </span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
-              A Physician-Technologist{" "}
-              <span className="text-gradient-primary">Led Firm</span>
+              The Future of{" "}
+              <span className="text-gradient-primary">Health</span>{" "}
+              is Biological
             </h2>
             <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
               <p>
-                BioCircuit Laboratories is a premier tech consultancy built at the intersection of clinical medicine and software engineering. We serve international NGOs and government agencies who need reliable, scalable digital health infrastructure.
+                BioCircuit Laboratories sits at the frontier where biotechnology meets traditional wellness. 
+                We believe that the deepest innovations come from understanding the circuits already running 
+                inside every living thing.
               </p>
               <p>
-                Led by a physician-technologist, every solution we deliver bridges clinical reality and engineering excellence. We do not just build software. We build systems that save lives.
+                From researching the fundamental properties of water to consulting brands on how 
+                biotechnology can transform fashion, architecture, and athletics, we work 
+                across disciplines because biology doesn't respect boundaries.
+              </p>
+              <p>
+                Our mission is simple: make the science of life accessible, actionable, and alive.
               </p>
             </div>
           </motion.div>
 
+          {/* Right: Pillars */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 gap-4"
+            className="space-y-6"
           >
-            {[
-              { icon: HeartPulse, label: "Clinical Precision" },
-              { icon: Cloud, label: "Cloud Infrastructure" },
-              { icon: Shield, label: "Enterprise Security" },
-              { icon: BarChart3, label: "Data Analytics" },
-              { icon: TrendingUp, label: "Scalable Systems" },
-              { icon: Briefcase, label: "Business Strategy" },
-            ].map((item, i) => (
+            {pillars.map((pillar, i) => (
               <motion.div
-                key={item.label}
+                key={pillar.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.3 + i * 0.1, duration: 0.5 }}
-                className="flex items-center gap-3 p-4 rounded-lg border border-border bg-card/30 hover:border-primary/40 transition-all duration-300"
+                transition={{ delay: 0.3 + i * 0.15, duration: 0.6 }}
+                className="group flex gap-5 p-6 rounded-xl border border-border bg-card/30 backdrop-blur-sm hover:border-primary/40 transition-all duration-500"
               >
-                <item.icon size={18} className="text-primary shrink-0" />
-                <span className="font-body text-sm text-foreground">{item.label}</span>
+                <div className="shrink-0 w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-500">
+                  <pillar.icon size={22} className="text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-display text-base font-semibold text-foreground mb-2">
+                    {pillar.title}
+                  </h3>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                    {pillar.description}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </motion.div>

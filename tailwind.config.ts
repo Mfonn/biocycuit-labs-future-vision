@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Playfair Display", "serif"],
+        display: ["Orbitron", "sans-serif"],
         body: ["Inter", "sans-serif"],
       },
       colors: {
@@ -51,6 +51,8 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "bio-warm": "hsl(var(--bio-warm))",
+        "bio-earth": "hsl(var(--bio-earth))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
