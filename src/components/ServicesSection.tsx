@@ -6,6 +6,20 @@ const WAITLIST_URL = "https://forms.gle/y8hGwK7KcZAZdEYH7";
 
 const services = [
   {
+    icon: GraduationCap,
+    title: "Education",
+    description: "Check out our courses. We're reimagining how people learn about biology, technology, and the systems that connect them.",
+    status: "active",
+    href: "/education",
+  },
+  {
+    icon: Bot,
+    title: "Agentic AI for Wellness",
+    description: "Purpose-built agentic AI systems for health, fitness, and wellness businesses. Currently in development.",
+    status: "coming-soon",
+    href: "/agentic-ai-wellness",
+  },
+  {
     icon: Microscope,
     title: "Research",
     description: "Explore our published and ongoing research",
@@ -20,11 +34,11 @@ const services = [
     href: "/biotechnology-consulting",
   },
   {
-    icon: GraduationCap,
-    title: "Education",
-    description: "Check out our courses. We're reimagining how people learn about biology, technology, and the systems that connect them.",
+    icon: Database,
+    title: "Machine Learning Data",
+    description: "Access datasets powering the next generation of biological insights. Open data for open science.",
     status: "active",
-    href: "/education",
+    href: "/machine-learning-data",
   },
   {
     icon: ShoppingBag,
@@ -39,20 +53,6 @@ const services = [
     description: "Become a scientist for a day with hands-on biotech experiences that make science tangible and fun.",
     status: "coming-soon",
     href: "/biotech-workshops",
-  },
-  {
-    icon: Database,
-    title: "Machine Learning Data",
-    description: "Access datasets powering the next generation of biological insights. Open data for open science.",
-    status: "active",
-    href: "/machine-learning-data",
-  },
-  {
-    icon: Bot,
-    title: "Agentic AI for Wellness",
-    description: "Purpose-built agentic AI systems for health, fitness, and wellness businesses. Currently in development.",
-    status: "coming-soon",
-    href: "/agentic-ai-wellness",
   },
 ];
 
