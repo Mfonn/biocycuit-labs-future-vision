@@ -23,6 +23,7 @@ import CourseDetail from "./pages/CourseDetail";
 import CourseLearn from "./pages/CourseLearn";
 import CourseCertificate from "./pages/CourseCertificate";
 import Obsidian from "./pages/Obsidian";
+import AgenticAIWellness from "./pages/AgenticAIWellness";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/shop/obsidian" element={<Obsidian />} />
           <Route path="/biotech-workshops" element={<BiotechWorkshops />} />
           <Route path="/machine-learning-data" element={<MachineLearningData />} />
+          <Route path="/agentic-ai-wellness" element={<AgenticAIWellness />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -51,6 +51,29 @@ const Education = () => {
           );
         })}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mb-16 p-8 md:p-10 rounded-xl border border-primary/30 bg-card/50"
+      >
+        <span className="text-xs tracking-[0.4em] uppercase text-primary font-body block mb-3">New Service</span>
+        <h3 className="font-display text-2xl md:text-3xl font-semibold text-foreground mb-4">
+          Custom Educational Curriculums
+        </h3>
+        <p className="font-body text-muted-foreground leading-relaxed mb-6 max-w-3xl">
+          Beyond our open courses, we now design tailored educational curriculums for specific projects, organizations, and industries. From biotechnology and wellness to interdisciplinary science programs, we build learning experiences that fit your context and goals.
+        </p>
+        <a
+          href="https://forms.gle/y8hGwK7KcZAZdEYH7"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-display text-sm tracking-wider uppercase bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-shadow duration-500"
+        >
+          Reach Out <ArrowRight size={16} />
+        </a>
+      </motion.div>
     </ServicePageLayout>
   );
 };
