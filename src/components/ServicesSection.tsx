@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
-import { Microscope, Cpu, GraduationCap, ShoppingBag, FlaskConical, Database } from "lucide-react";
+import { Microscope, Cpu, GraduationCap, ShoppingBag, FlaskConical, Database, Bot } from "lucide-react";
 import { Link } from "react-router-dom";
+
+const WAITLIST_URL = "https://forms.gle/y8hGwK7KcZAZdEYH7";
 
 const services = [
   {
@@ -44,6 +46,13 @@ const services = [
     description: "Access datasets powering the next generation of biological insights. Open data for open science.",
     status: "active",
     href: "/machine-learning-data",
+  },
+  {
+    icon: Bot,
+    title: "Agentic AI for Wellness",
+    description: "Purpose-built agentic AI systems for health, fitness, and wellness businesses. Currently in development.",
+    status: "coming-soon",
+    href: "/agentic-ai-wellness",
   },
 ];
 
