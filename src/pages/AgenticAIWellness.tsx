@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Compass, BrainCircuit, ShieldCheck, Eye, ArrowRight } from "lucide-react";
 import ServicePageLayout from "@/components/ServicePageLayout";
 
-const WAITLIST_URL = "https://forms.gle/y8hGwK7KcZAZdEYH7";
+const WAITLIST_URL = "https://forms.gle/KwehCRUrHg3aZepu6";
 
 const pillars = [
   {
