@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
-import { Dna, Zap, Leaf } from "lucide-react";
+import { Dna, Bot, Leaf } from "lucide-react";
 
 const pillars = [
   {
-    icon: Dna,
-    title: "Bio-Innovation",
-    description: "We use biological systems and synthetic biology to create solutions that work in harmony with nature.",
+    icon: Bot,
+    title: "Agentic AI",
+    description: "We build agentic AI systems for real-world industries — starting in health tech, expanding into wellness, fitness, and beyond.",
   },
   {
-    icon: Zap,
-    title: "Technology",
-    description: "We use machine learning, data science, and digital tools to decode the complexity of living systems.",
+    icon: Dna,
+    title: "Biotechnology",
+    description: "We use biological systems and synthetic biology to create solutions that work in harmony with nature, across fashion, architecture, sports, and health.",
   },
   {
     icon: Leaf,
-    title: "Traditional Wellness",
-    description: "We honour ancestral knowledge and holistic health practices, integrating time-tested wisdom with modern science.",
+    title: "Wellness & Tradition",
+    description: "Wellness is one part of what we do. We honour ancestral knowledge and holistic health practices, integrating time-tested wisdom with modern science.",
   },
 ];
 
