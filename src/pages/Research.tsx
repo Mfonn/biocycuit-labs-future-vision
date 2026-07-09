@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Microscope, ArrowRight, Beaker, Brain, Droplets, Hash } from "lucide-react";
+import { Microscope, ArrowRight, Beaker, Brain, Droplets, Hash, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import ServicePageLayout from "@/components/ServicePageLayout";
 
