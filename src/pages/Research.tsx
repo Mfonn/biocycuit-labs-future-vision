@@ -5,6 +5,15 @@ import ServicePageLayout from "@/components/ServicePageLayout";
 
 const researchProjects = [
   {
+    icon: Heart,
+    title: "Oxytocin & Sympathetic Innervation of the Ovaries",
+    slug: "/research",
+    field: "Reproductive Neuroendocrinology",
+    status: "Active — Underway",
+    description: "Our current active investigation into the relationship between oxytocin signaling and sympathetic innervation of the ovaries, exploring how neuroendocrine crosstalk shapes ovarian function and reproductive health.",
+    tags: ["Oxytocin", "Neuroendocrinology", "Ovarian Function", "Autonomic Nervous System"],
+  },
+  {
     icon: Brain,
     title: "Autism & Neurodivergence",
     slug: "/research/autism-neurodivergence",
