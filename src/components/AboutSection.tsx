@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
-import { Dna, Zap, Leaf } from "lucide-react";
+import { Dna, Bot, Leaf } from "lucide-react";
 
 const pillars = [
   {
-    icon: Dna,
-    title: "Bio-Innovation",
-    description: "We use biological systems and synthetic biology to create solutions that work in harmony with nature.",
+    icon: Bot,
+    title: "Agentic AI",
+    description: "We build agentic AI systems for real-world industries — starting in health tech, expanding into wellness, fitness, and beyond.",
   },
   {
-    icon: Zap,
-    title: "Technology",
-    description: "We use machine learning, data science, and digital tools to decode the complexity of living systems.",
+    icon: Dna,
+    title: "Biotechnology",
+    description: "We use biological systems and synthetic biology to create solutions that work in harmony with nature, across fashion, architecture, sports, and health.",
   },
   {
     icon: Leaf,
-    title: "Traditional Wellness",
-    description: "We honour ancestral knowledge and holistic health practices, integrating time-tested wisdom with modern science.",
+    title: "Wellness & Tradition",
+    description: "Wellness is one part of what we do. We honour ancestral knowledge and holistic health practices, integrating time-tested wisdom with modern science.",
   },
 ];
 
@@ -39,23 +39,19 @@ const AboutSection = () => {
               Who We Are
             </span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
-              The Future of{" "}
-              <span className="text-gradient-primary">Health</span>{" "}
-              is Biological
+              Building the{" "}
+              <span className="text-gradient-primary">next layer</span>{" "}
+              of biology and intelligence
             </h2>
             <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
               <p>
-                BioCircuit Laboratories sits at the frontier where biotechnology meets traditional wellness. 
-                We believe that the deepest innovations come from understanding the circuits already running 
-                inside every living thing.
+                BioCircuit Laboratories works across biotechnology, agentic AI, and research. Wellness is one domain we serve — not the whole story.
               </p>
               <p>
-                From researching the fundamental properties of water to consulting brands on how 
-                biotechnology can transform fashion, architecture, and athletics, we work 
-                across disciplines because biology doesn't respect boundaries.
+                From building agentic AI systems for health tech to consulting brands on how biotechnology can transform fashion, architecture, and athletics, we work across disciplines because biology and intelligence don't respect boundaries.
               </p>
               <p>
-                Our mission is simple: make the science of life accessible, actionable, and alive.
+                Our mission is simple: make the science of life, and the systems built on top of it, accessible, actionable, and alive.
               </p>
             </div>
           </motion.div>

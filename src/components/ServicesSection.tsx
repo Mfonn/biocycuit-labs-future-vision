@@ -6,18 +6,18 @@ const WAITLIST_URL = "https://forms.gle/y8hGwK7KcZAZdEYH7";
 
 const services = [
   {
+    icon: Bot,
+    title: "Agentic AI",
+    description: "We build agentic AI systems for real-world industries — starting with health tech, and expanding into wellness, fitness, and beyond.",
+    status: "active",
+    href: "/agentic-ai-wellness",
+  },
+  {
     icon: GraduationCap,
     title: "Education",
     description: "Check out our courses. We're reimagining how people learn about biology, technology, and the systems that connect them.",
     status: "active",
     href: "/education",
-  },
-  {
-    icon: Bot,
-    title: "Agentic AI for Wellness",
-    description: "Purpose-built agentic AI systems for health, fitness, and wellness businesses. Currently in development.",
-    status: "coming-soon",
-    href: "/agentic-ai-wellness",
   },
   {
     icon: Microscope,

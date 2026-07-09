@@ -51,10 +51,10 @@ const BiotechWorkshops = () => {
       >
         <FlaskConical className="mx-auto mb-4 text-bio-warm" size={32} />
         <h2 className="font-display text-xl font-bold text-foreground mb-2">
-          Workshops Launching Soon
+          Health & Beauty Bazaar — Coming Soon
         </h2>
         <p className="font-body text-muted-foreground mb-6 max-w-md mx-auto">
-          We're finalizing our first round of workshops. Be the first to know.
+          Our next event is a Health & Beauty Bazaar bringing together science, wellness, and craft. Leave your email to be the first to know when doors open.
         </p>
 
         {!submitted ? (
