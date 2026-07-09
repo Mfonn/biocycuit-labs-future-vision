@@ -63,9 +63,9 @@ const HeroSection = () => {
           transition={{ delay: 0.8, duration: 0.8 }}
           className="font-display text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4 tracking-wider">
           
-          Your Wellness{" "}
+          Biotechnology{" "}
           <span className="text-primary font-bold">+</span>{" "}
-          Our Technology
+          Agentic AI
         </motion.p>
 
         {/* Description */}
@@ -73,8 +73,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
-          className="font-body text-base sm:text-lg text-muted-foreground/70 max-w-2xl mx-auto mb-12 leading-relaxed">Blend Biotechnology with holistic wellness.
-Building the future of health.
+          className="font-body text-base sm:text-lg text-muted-foreground/70 max-w-2xl mx-auto mb-12 leading-relaxed">Building agentic AI systems and biotechnology solutions across industries — from health and wellness to fashion, architecture, and beyond.
 
 
         </motion.p>
