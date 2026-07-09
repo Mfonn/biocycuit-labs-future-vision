@@ -39,23 +39,19 @@ const AboutSection = () => {
               Who We Are
             </span>
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
-              The Future of{" "}
-              <span className="text-gradient-primary">Health</span>{" "}
-              is Biological
+              Building the{" "}
+              <span className="text-gradient-primary">next layer</span>{" "}
+              of biology and intelligence
             </h2>
             <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
               <p>
-                BioCircuit Laboratories sits at the frontier where biotechnology meets traditional wellness. 
-                We believe that the deepest innovations come from understanding the circuits already running 
-                inside every living thing.
+                BioCircuit Laboratories works across biotechnology, agentic AI, and research. Wellness is one domain we serve — not the whole story.
               </p>
               <p>
-                From researching the fundamental properties of water to consulting brands on how 
-                biotechnology can transform fashion, architecture, and athletics, we work 
-                across disciplines because biology doesn't respect boundaries.
+                From building agentic AI systems for health tech to consulting brands on how biotechnology can transform fashion, architecture, and athletics, we work across disciplines because biology and intelligence don't respect boundaries.
               </p>
               <p>
-                Our mission is simple: make the science of life accessible, actionable, and alive.
+                Our mission is simple: make the science of life, and the systems built on top of it, accessible, actionable, and alive.
               </p>
             </div>
           </motion.div>
