@@ -21,6 +21,7 @@ The services page becomes a real page (`/services`) with depth, not just cards. 
 
 **1. Agentic AI** (`/agentic-ai`, old `/agentic-ai-wellness` redirects here)
 Agents that take the repetitive work off your team so the bottlenecks clear. Explained honestly at the mechanics level:
+
 - System prompting and role design grounded in your own data
 - Retrieval over your database, so answers come from your records and not the open internet
 - Tool and API calls that let the agent actually do things in your stack
@@ -30,18 +31,20 @@ Agents that take the repetitive work off your team so the bottlenecks clear. Exp
 - Existing PartyRock case studies stay, framed as health-tech proof of the pattern
 
 **2. Security, Governance & Cloud** (`/security-governance`)
-- Data protection compliance: NDPR / NDPA (Nigeria Data Protection Act, NDPC as regulator) and GDPR, with health data handled to the stricter bar
+
+- Data protection compliance: NDPR / NDPA (Nigeria Data Protection Act, NDPC as regulator) and GDPR, with health data and financial handled to the stricter bar
 - Security posture reviews, threat modelling, hardening
 - Incident response and investigation of attacks
 - Governance of company IP, databases and applications
 - Cloud and infrastructure: AWS, Azure, Terraform, infrastructure as code, least-privilege access, audit trails
 
 **3. Deep Research** (`/deep-research`)
+
 - Commissioned research into your specific context: what has been done, what is emerging, what it means for you
 - Method laid out: scoping, literature and prior-art review, primary analysis, briefing
-- Links out to published work (ResearchGate and LinkedIn as institutional credentials, no personal name in the copy) and to the existing on-site research articles (oxytocin and sympathetic ovarian innervation, water, mycelium electrode arrays, autism and neurodivergence, numerology), each with a one-line summary
+- Links out to published work (ResearchGate as institutional credentials, no personal name in the copy) and to the existing on-site research articles (oxytocin and sympathetic ovarian innervation, water, mycelium electrode arrays, autism and neurodivergence, numerology), each with a one-line summary
 
-Biotechnology consulting, education, workshops, ML data and shop remain, restyled and repositioned below the three lead pillars.
+Biotechnology consulting, education, workshops, ML dat and shop removed.
 
 ## Contact per service
 
@@ -72,3 +75,5 @@ Every service page and the services index gets its own contact block using `Bioc
 - All colour values live as HSL CSS variables in `index.css`
 - Old `/agentic-ai-wellness` route kept as a redirect so existing links do not break
 - No backend needed; contact stays mailto
+
+Also remember to add the subscribe to newsletter thingie
