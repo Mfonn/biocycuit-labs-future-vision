@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Orbitron", "sans-serif"],
-        body: ["Inter", "sans-serif"],
+        display: ["Instrument Serif", "Georgia", "serif"],
+        body: ["Work Sans", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,8 +51,8 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "bio-warm": "hsl(var(--bio-warm))",
-        "bio-earth": "hsl(var(--bio-earth))",
+        platinum: "hsl(var(--platinum))",
+        "platinum-dim": "hsl(var(--platinum-dim))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
