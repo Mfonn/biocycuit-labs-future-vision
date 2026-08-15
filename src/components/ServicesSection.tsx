@@ -1,140 +1,93 @@
-import { motion } from "framer-motion";
-import { Microscope, Cpu, GraduationCap, ShoppingBag, FlaskConical, Database, Bot } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const WAITLIST_URL = "https://forms.gle/y8hGwK7KcZAZdEYH7";
+import { ArrowRight } from "lucide-react";
+import { Reveal } from "@/components/Lux";
 
 const services = [
   {
-    icon: Bot,
+    index: "01",
     title: "Agentic AI",
-    description: "We build agentic AI systems for real-world industries — starting with health tech, and expanding into wellness, fitness, and beyond.",
-    status: "active",
-    href: "/agentic-ai-wellness",
+    href: "/agentic-ai",
+    description:
+      "Agents that take the repetitive work off your team. System prompting written against your own policies, retrieval over your database, tool and API access so they can actually act, and orchestration with human approval where it matters.",
+    points: ["Grounded in your data", "Deployed in your cloud", "Yours to edit"],
   },
   {
-    icon: GraduationCap,
-    title: "Education",
-    description: "Check out our courses. We're reimagining how people learn about biology, technology, and the systems that connect them.",
-    status: "active",
-    href: "/education",
+    index: "02",
+    title: "Security, Governance and Cloud",
+    href: "/security-governance",
+    description:
+      "Data protection compliance under NDPA and GDPR, security posture reviews and threat modelling, incident response and investigation, and the AWS, Azure and Terraform work that holds it all up.",
+    points: ["NDPA and NDPR", "GDPR for health tech", "AWS · Azure · Terraform"],
   },
   {
-    icon: Microscope,
-    title: "Research",
-    description: "Explore our published and ongoing research",
-    status: "active",
-    href: "/research",
-  },
-  {
-    icon: Cpu,
-    title: "Biotechnology Consulting",
-    description: "We bring biotechnology into your fashion, architecture, and sports, connecting organic systems with modern industry.",
-    status: "active",
-    href: "/biotechnology-consulting",
-  },
-  {
-    icon: Database,
-    title: "Machine Learning Data",
-    description: "Access datasets powering the next generation of biological insights. Open data for open science.",
-    status: "active",
-    href: "/machine-learning-data",
-  },
-  {
-    icon: ShoppingBag,
-    title: "Shop",
-    description: "Visit our virtual store with curated tools and resources for the modern biohacker and wellness enthusiast.",
-    status: "coming-soon",
-    href: "/shop",
-  },
-  {
-    icon: FlaskConical,
-    title: "Biotech Workshops",
-    description: "Become a scientist for a day with hands-on biotech experiences that make science tangible and fun.",
-    status: "coming-soon",
-    href: "/biotech-workshops",
+    index: "03",
+    title: "Deep Research",
+    href: "/deep-research",
+    description:
+      "Commissioned research into your specific context. Prior art and literature, primary analysis where the published work runs out, regulatory context, and a briefing that ends in a recommendation rather than a reading list.",
+    points: ["Prior art and failures", "Primary analysis", "Decision-ready briefing"],
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.12 },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" as const } },
-};
-
 const ServicesSection = () => {
   return (
-    <section id="services" className="relative py-32 px-6 overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px line-glow opacity-50" />
-
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
-        >
-          <span className="text-xs tracking-[0.4em] uppercase text-primary font-body block mb-4">
-            What We Do
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our Services
+    <section id="services" className="relative py-32 lg:py-40 px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto">
+        <Reveal className="mb-20 max-w-3xl">
+          <p className="overline text-primary mb-6">What we do</p>
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground mb-7">
+            Three things, done properly
           </h2>
-          <p className="font-body text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-            We sit at the intersection of ancient wellness wisdom and modern technology, 
-            offering pathways to understand and enhance biological systems.
+          <p className="font-body text-base text-platinum-dim leading-relaxed max-w-xl">
+            We would rather be genuinely good at a short list than passable at a long one.
           </p>
-        </motion.div>
+        </Reveal>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {services.map((service) => (
-            <motion.div key={service.title} variants={cardVariants}>
+        <div className="border-t border-platinum/10">
+          {services.map((s, i) => (
+            <Reveal key={s.title} delay={i * 0.06}>
               <Link
-                to={service.href}
-                className="group relative block rounded-xl border border-border bg-card/50 backdrop-blur-sm p-8 hover:border-primary/50 transition-all duration-500 hover:glow-border cursor-pointer overflow-hidden h-full"
+                to={s.href}
+                className="group grid lg:grid-cols-[90px_1fr_300px] gap-6 lg:gap-12 py-12 lg:py-14 border-b border-platinum/10 hover:bg-card/40 transition-colors duration-700 px-2 lg:px-6"
               >
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-shimmer" />
+                <span className="font-display text-2xl text-primary/60 group-hover:text-primary transition-colors duration-700">
+                  {s.index}
+                </span>
 
-                <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-500">
-                    <service.icon size={24} className="text-primary" />
-                  </div>
-
-                  {service.status === "coming-soon" && (
-                    <span className="inline-block text-[10px] tracking-[0.2em] uppercase px-3 py-1 rounded-full border border-bio-warm/30 text-bio-warm bg-bio-warm/5 mb-4 font-body">
-                      Coming Soon
-                    </span>
-                  )}
-
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                    {service.title}
+                <div>
+                  <h3 className="font-display text-2xl lg:text-4xl text-foreground mb-5 leading-tight group-hover:text-primary transition-colors duration-500">
+                    {s.title}
                   </h3>
-
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                    {service.description}
+                  <p className="font-body text-sm lg:text-base text-platinum-dim leading-relaxed max-w-2xl">
+                    {s.description}
                   </p>
+                </div>
 
-                  <span className="inline-flex items-center gap-1 mt-4 text-xs text-primary font-display tracking-wider uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Explore →
+                <div className="flex flex-col justify-between gap-8">
+                  <ul className="space-y-3">
+                    {s.points.map((p) => (
+                      <li key={p} className="font-body text-xs uppercase tracking-[0.16em] text-platinum-dim">
+                        {p}
+                      </li>
+                    ))}
+                  </ul>
+                  <span className="inline-flex items-center gap-2 text-[11px] font-body uppercase tracking-[0.22em] text-primary opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                    Read more <ArrowRight size={12} className="transition-transform duration-500 group-hover:translate-x-1" />
                   </span>
                 </div>
               </Link>
-            </motion.div>
+            </Reveal>
           ))}
-        </motion.div>
+        </div>
+
+        <Reveal delay={0.1} className="mt-14">
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-2 text-[11px] font-body uppercase tracking-[0.22em] text-foreground border-b border-platinum/25 pb-1 hover:text-primary hover:border-primary transition-colors duration-500"
+          >
+            See all services in detail <ArrowRight size={12} />
+          </Link>
+        </Reveal>
       </div>
     </section>
   );
