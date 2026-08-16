@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
-import { ReactNode } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { ReactNode, useEffect } from "react";
+import Seo from "@/components/Seo";
 
 interface ResearchArticleLayoutProps {
   title: string;
@@ -20,6 +21,12 @@ const ResearchArticleLayout = ({
   children,
   references,
 }: ResearchArticleLayoutProps) => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Top nav */}
@@ -45,7 +52,7 @@ const ResearchArticleLayout = ({
       </motion.div>
 
       {/* Hero */}
-      <section className="relative pt-32 pb-16 px-6 overflow-hidden bio-grid">
+      <section className="relative pt-32 pb-16 px-6 overflow-hidden fine-grid">
         <div className="absolute inset-0 bg-gradient-radial-glow" />
         <div className="absolute inset-0 bg-gradient-mesh" />
         <motion.div
@@ -67,8 +74,8 @@ const ResearchArticleLayout = ({
             <span
               className={`text-[10px] tracking-wider uppercase px-2 py-0.5 rounded-full font-body border ${
                 status.includes("Active") || status.includes("Progress")
-                  ? "border-bio-warm/30 text-bio-warm bg-bio-warm/5"
-                  : "border-primary/30 text-primary bg-primary/5"
+                  ? "border-primary/40 text-primary bg-primary/10"
+                  : "border-platinum/20 text-platinum-dim bg-platinum/5"
               }`}
             >
               {status}

@@ -1,99 +1,72 @@
-import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, Youtube, Instagram, Newspaper } from "lucide-react";
+import { ArrowUpRight, Youtube, Instagram, Newspaper } from "lucide-react";
+import { Reveal, mailto } from "@/components/Lux";
+
+const routes = [
+  { label: "Agentic AI", subject: "Agentic AI enquiry" },
+  { label: "Security, governance and cloud", subject: "Security and governance enquiry" },
+  { label: "Deep research", subject: "Deep research enquiry" },
+];
 
 const socials = [
-{
-  label: "YouTube",
-  href: "https://www.youtube.com/@biocircuitlaboratories",
-  icon: Youtube
-},
-{
-  label: "Instagram",
-  href: "https://www.instagram.com/biocircuitlaboratories/",
-  icon: Instagram
-},
-{
-  label: "Newsletter",
-  href: "https://fuzzymustard.substack.com/",
-  icon: Newspaper
-}];
-
+  { label: "YouTube", href: "https://www.youtube.com/@biocircuitlaboratories", icon: Youtube },
+  { label: "Instagram", href: "https://www.instagram.com/biocircuitlaboratories/", icon: Instagram },
+  { label: "Newsletter", href: "https://fuzzymustard.substack.com/", icon: Newspaper },
+];
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="relative py-32 px-6 overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px line-glow opacity-50" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/5 blur-[150px] rounded-full" />
+    <section id="contact" className="relative py-32 lg:py-40 px-6 lg:px-10 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-radial-glow" />
 
-      <div className="relative max-w-3xl mx-auto text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}>
-          
-          <span className="text-xs tracking-[0.4em] uppercase text-primary font-body block mb-4">
-            Join the Circuit
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Let's Build the Future{" "}
-            <span className="text-gradient-primary">Together</span>
+      <div className="relative max-w-[1400px] mx-auto">
+        <Reveal className="max-w-2xl mb-16">
+          <p className="overline text-primary mb-6">Get in touch</p>
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground mb-7">
+            Write to us in plain English.
           </h2>
-          <p className="font-body text-lg text-muted-foreground max-w-xl mx-auto mb-12 leading-relaxed">
-            Intrigued Enough to Connect?
+          <p className="font-body text-base text-platinum-dim leading-relaxed">
+            A paragraph about your situation is enough to start. We reply with an honest read on
+            whether we are the right people for it, and what a first step would cost.
           </p>
-        </motion.div>
+        </Reveal>
 
-        {/* CTA buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          
-          <a
-            href="mailto:Biocircuitlaboratories@gmail.com"
-            className="group flex items-center gap-3 px-8 py-4 rounded-lg font-display text-sm tracking-wider uppercase bg-primary text-primary-foreground hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-all duration-500">
-            
-            <Mail size={18} />
-            <span>Contact Us</span>
-            <ArrowUpRight size={16} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-          </a>
-          <a
-            href="https://fuzzymustard.substack.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-4 rounded-lg font-display text-sm tracking-wider uppercase border border-border text-muted-foreground hover:border-primary hover:text-primary transition-all duration-500">
-            
-            Subscribe to Newsletter
-          </a>
-        </motion.div>
+        <div className="border-t border-platinum/10 mb-16">
+          {routes.map((r, i) => (
+            <Reveal key={r.label} delay={i * 0.06}>
+              <a
+                href={mailto(r.subject)}
+                className="group flex flex-wrap items-center justify-between gap-4 py-8 border-b border-platinum/10 px-2 lg:px-5 hover:bg-card/40 transition-colors duration-700"
+              >
+                <span className="font-display text-xl lg:text-2xl text-foreground group-hover:text-primary transition-colors duration-500">
+                  {r.label}
+                </span>
+                <span className="inline-flex items-center gap-2 text-[11px] font-body uppercase tracking-[0.22em] text-primary opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+                  Email us <ArrowUpRight size={13} />
+                </span>
+              </a>
+            </Reveal>
+          ))}
+        </div>
 
-        {/* Social links */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="flex items-center justify-center gap-6">
-          
-          {socials.map((s) =>
-          <a
-            key={s.label}
-            href={s.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors font-body">
-            
-              <s.icon size={18} />
-              {s.label}
-            </a>
-          )}
-        </motion.div>
+        <Reveal delay={0.1}>
+          <div className="flex flex-wrap items-center gap-8">
+            {socials.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-xs font-body uppercase tracking-[0.18em] text-platinum-dim hover:text-primary transition-colors duration-500"
+              >
+                <s.icon size={14} />
+                {s.label}
+              </a>
+            ))}
+          </div>
+        </Reveal>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default ContactSection;
