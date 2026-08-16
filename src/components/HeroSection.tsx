@@ -32,10 +32,9 @@ const HeroSection = () => {
               transition={{ delay: 0.3, duration: 1.2, ease }}
               className="font-display text-[3rem] sm:text-[4.2rem] lg:text-[5.4rem] leading-[0.98] text-foreground mb-9"
             >
-              We build the quiet
+              Building the machinery
               <br />
-              machinery behind
-              <br />
+              behind{" "}
               <span className="text-gradient-primary italic">good decisions.</span>
             </motion.h1>
 

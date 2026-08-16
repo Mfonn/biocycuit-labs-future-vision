@@ -35,12 +35,6 @@ const ServicesSection = () => {
       <div className="max-w-[1400px] mx-auto">
         <Reveal className="mb-20 max-w-3xl">
           <p className="overline text-primary mb-6">What we do</p>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-foreground mb-7">
-            Three things, done properly
-          </h2>
-          <p className="font-body text-base text-platinum-dim leading-relaxed max-w-xl">
-            We would rather be genuinely good at a short list than passable at a long one.
-          </p>
         </Reveal>
 
         <div className="border-t border-platinum/10">
