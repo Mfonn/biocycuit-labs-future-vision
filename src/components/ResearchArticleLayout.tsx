@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
-import { ReactNode } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { ReactNode, useEffect } from "react";
+import Seo from "@/components/Seo";
 
 interface ResearchArticleLayoutProps {
   title: string;
@@ -20,6 +21,12 @@ const ResearchArticleLayout = ({
   children,
   references,
 }: ResearchArticleLayoutProps) => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Top nav */}
