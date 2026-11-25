@@ -1,77 +1,83 @@
-import { Reveal, SectionHeading, NumberedList, ContactBlock } from "@/components/Lux";
+import { Reveal, SectionHeading, NumberedList } from "@/components/Lux";
+import ServiceInquiryForm from "@/components/ServiceInquiryForm";
 import ServicePageLayout from "@/components/ServicePageLayout";
 import Seo from "@/components/Seo";
-import { ShieldCheck, Scale, Siren, FileLock2, Cloud, KeyRound } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowUpRight, Cloud, FileCheck2, KeyRound, SearchCheck, ShieldCheck, Siren } from "lucide-react";
 
 const capabilities = [
   {
-    icon: Scale,
-    title: "Data protection compliance",
-    body: "The Nigeria Data Protection Act and the NDPC's requirements, and GDPR where you touch European data. We map what personal data you hold, where it lives, who can reach it and on what legal basis, then close the gaps and leave you with the documentation a regulator will ask for.",
+    icon: Cloud,
+    title: "Cloud infrastructure & access control",
+    body: "Review and tighten cloud permissions, storage, network rules and infrastructure settings across AWS and Azure. Terraform keeps approved changes clear and repeatable.",
   },
   {
-    icon: FileLock2,
-    title: "Health and financial data",
-    body: "Health tech and fintech carry the stricter bar, so we hold you to it. Consent handling, minimisation, retention limits, encryption at rest and in transit, and access logs that show who read what and when.",
+    icon: SearchCheck,
+    title: "Code & CI/CD pipeline checks",
+    body: "Find exposed API keys, passwords, vulnerable code and container issues before updates reach production.",
   },
   {
     icon: ShieldCheck,
-    title: "Security posture reviews",
-    body: "A structured look at your applications, cloud accounts and databases. Threat modelling against how an attacker would actually come in, then hardening in priority order rather than a hundred page list nobody reads.",
+    title: "Hands-on fixes for developers",
+    body: "Work alongside your engineering team on clean, tested fixes. Reduce exposure without slowing releases.",
   },
   {
-    icon: Siren,
-    title: "Incident response and investigation",
-    body: "When something has already happened: containment, forensic review of what was reached, breach notification obligations under NDPA and GDPR timelines, and a written account of how it happened so it does not happen again.",
-  },
-  {
-    icon: KeyRound,
-    title: "Governance of IP and databases",
-    body: "Who owns the model, the dataset, the code, and the outputs. Access policy, key management, separation of duties, vendor and processor agreements, and an audit trail across the systems that hold your intellectual property.",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud and infrastructure",
-    body: "AWS and Azure architecture reviewed and rebuilt as infrastructure as code with Terraform. Least privilege by default, network segmentation, secrets management, backups you have actually tested, and environments that can be rebuilt from the repository.",
+    icon: FileCheck2,
+    title: "Compliance & audit records",
+    body: "Put technical controls and evidence in place for Nigeria Data Protection Act, UK GDPR, ISO 27001, SOC 2 and HIPAA requirements.",
   },
 ];
 
-const engagement = [
+const packages = [
+  {
+    title: "Cloud & Pipeline Security Audit",
+    body: "A full review of cloud settings and code pipelines, a clear compliance gap list, and hands-on fixes for critical vulnerabilities.",
+    points: ["Cloud and code review", "Prioritised findings", "Tested fixes for critical issues"],
+  },
+  {
+    title: "BioCircuit Secure AI Suite",
+    label: "Flagship",
+    body: "Combines a full Cloud & Code Security Audit with hardened cloud or on-premise infrastructure and custom workflows for your team.",
+    points: ["Security audit and hardening", "Privacy safeguards", "Custom workflows for daily operations"],
+  },
+];
+
+const workflow = [
   {
     title: "Discovery",
-    body: "We inventory the systems, the data and the people with access. Most of the risk we find is in something nobody remembered was still running.",
+    body: "List the systems, data and people with access, including services your team may have overlooked.",
   },
   {
     title: "Assessment",
-    body: "Threat modelling and a compliance gap analysis against NDPA and GDPR, scored by likelihood and impact rather than by how alarming it sounds.",
+    body: "Review likely threats and compliance gaps, then rank them by likelihood and impact.",
   },
   {
     title: "Remediation",
-    body: "We fix in order of real exposure. Identity and access first, then data handling, then the infrastructure work, with Terraform so the fix stays fixed.",
+    body: "Address exposed access first, followed by data handling and infrastructure settings. Keep approved changes in Terraform where appropriate.",
   },
   {
     title: "Governance",
-    body: "Policies, roles, retention schedules, processor agreements, and an incident playbook your team can follow at two in the morning without us.",
+    body: "Set clear roles, retention rules, processor records and an incident plan your team can use.",
   },
   {
     title: "Review",
-    body: "Quarterly or after any material change. Posture drifts. Somebody always adds a bucket.",
+    body: "Recheck after significant changes and on a regular schedule so the controls stay current.",
   },
 ];
 
 const SecurityGovernance = () => (
   <>
     <Seo
-      title="Cloud & Application Security in Abuja | NDPR, NDPA and GDPR Compliance"
-      description="Security, governance and cloud consulting in Abuja, Nigeria. NDPA and NDPR compliance, GDPR for health tech, security posture reviews, incident investigation, and AWS, Azure and Terraform hardening."
+      title="Cloud & Application Security in Abuja | NDPA, UK GDPR and ISO 27001"
+      description="Cloud security, DevSecOps and data protection support in Abuja and across Nigeria. Review cloud access, code pipelines, compliance controls and incident response."
       path="/security-governance"
       jsonLd={{
         "@context": "https://schema.org",
         "@type": "Service",
-        serviceType: "Application and cloud security, data protection compliance",
-        name: "Security, governance and cloud",
+        serviceType: "Cloud and application security, DevSecOps, data protection compliance",
+        name: "Security & Governance",
         description:
-          "NDPA, NDPR and GDPR compliance, security posture reviews, incident response, and AWS, Azure and Terraform infrastructure hardening.",
+          "Cloud hardening, code and pipeline checks, hands-on remediation, compliance controls and incident investigation.",
         areaServed: ["Abuja", "Nigeria", "Worldwide"],
         provider: {
           "@type": "ProfessionalService",
@@ -82,68 +88,95 @@ const SecurityGovernance = () => (
       }}
     />
     <ServicePageLayout
-      overline="Security, governance and cloud"
-      title="Keep the thing you built"
-      subtitle="Your data, your customers' data, your intellectual property and the infrastructure it all sits on. We do the compliance work, harden the systems, and investigate when something has already gone wrong. Abuja based, working across Nigeria and with European obligations."
+      theme="obsidian"
+      overline="Cloud security • DevSecOps • NDPA, UK GDPR & ISO 27001"
+      title="Enterprise Armor for Your Cloud and Code."
+      subtitle="Lock down cloud servers, APIs and software pipelines before exposed keys or misconfigurations lead to a breach or regulatory fine."
+      heroAction={
+        <Button asChild className="rounded-sm">
+          <a href="#security-form">Request a Security Review <ArrowUpRight aria-hidden="true" /></a>
+        </Button>
+      }
+      trustNote="Cloud hardening • Code and container checks • Hands-on fixes • NDPA and UK GDPR readiness"
     >
-      <Reveal className="mb-24">
-        <div className="surface p-10 lg:p-14">
-          <p className="overline text-platinum-dim mb-6">Why this sits next to the AI work</p>
-          <p className="font-body text-base text-platinum-dim leading-relaxed max-w-3xl mb-5">
-            The moment you put an agent near your database, you have made a data protection decision
-            and a security decision, whether or not anyone wrote them down. Most teams find that out
-            after an audit or an incident.
-          </p>
-          <p className="font-body text-base text-platinum-dim leading-relaxed max-w-3xl">
-            We would rather build both sides at once. The same people designing the retrieval layer
-            should be the ones deciding who can read it.
-          </p>
-        </div>
-      </Reveal>
-
-      <SectionHeading overline="What we do" title="Six areas of work" />
-
+      <SectionHeading
+        overline="Where exposure begins"
+        title="Security work across your systems"
+        intro="Practical checks and fixes for the cloud, code and data your business depends on."
+      />
       <div className="grid md:grid-cols-2 gap-px bg-platinum/10 border border-platinum/10 mb-24">
-        {capabilities.map((c, i) => (
-          <Reveal key={c.title} delay={i * 0.04}>
-            <div className="bg-background h-full p-9 hover:bg-card/60 transition-colors duration-700">
-              <c.icon size={20} className="text-primary mb-6" strokeWidth={1.25} />
-              <h3 className="font-display text-xl text-foreground mb-4">{c.title}</h3>
-              <p className="font-body text-sm text-platinum-dim leading-relaxed">{c.body}</p>
+        {capabilities.map((capability, index) => (
+          <Reveal key={capability.title} delay={index * 0.04}>
+            <div className="bg-background h-full p-7 sm:p-9 hover:bg-card/60 transition-colors duration-700">
+              <capability.icon size={20} className="text-accent mb-6" strokeWidth={1.35} aria-hidden="true" />
+              <h3 className="font-display text-xl text-foreground mb-4">{capability.title}</h3>
+              <p className="font-body text-sm text-platinum-dim leading-relaxed">{capability.body}</p>
             </div>
           </Reveal>
         ))}
       </div>
 
-      <SectionHeading overline="How an engagement runs" title="Five stages, in order" />
-      <div className="mb-24">
-        <NumberedList items={engagement} />
+      <Reveal className="mb-24">
+        <aside className="surface border-accent/30 p-7 sm:p-10 lg:p-12" aria-labelledby="year-end-title">
+          <div className="flex items-start gap-5">
+            <Siren className="mt-1 shrink-0 text-accent" size={22} strokeWidth={1.4} aria-hidden="true" />
+            <div>
+              <p className="overline text-accent mb-5">Year-end review window</p>
+              <h2 id="year-end-title" className="font-display text-3xl sm:text-4xl text-foreground leading-tight max-w-3xl mb-5">
+                Lock Down Your Systems Before the New Year
+              </h2>
+              <p className="font-body text-sm sm:text-base text-platinum-dim leading-relaxed max-w-3xl">
+                Use a quieter operating window to close security gaps with minimal disruption to your staff. Setup includes six months of complimentary monitoring and monthly fixes. Year-end setup slots are open through January 15, 2027.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </Reveal>
+
+      <SectionHeading
+        overline="Security services"
+        title="Choose the right level of support"
+        intro="Start with a focused audit, or bring cloud hardening and custom workflows together."
+      />
+      <div className="grid md:grid-cols-2 gap-5 mb-24">
+        {packages.map((service, index) => (
+          <Reveal key={service.title} delay={index * 0.06}>
+            <div className={`surface h-full p-7 sm:p-10 ${service.label ? "border-accent/40" : ""}`}>
+              {service.label && <p className="overline text-accent mb-4">{service.label}</p>}
+              <h3 className="font-display text-2xl text-foreground mb-4">{service.title}</h3>
+              <p className="font-body text-sm text-platinum-dim leading-relaxed mb-7">{service.body}</p>
+              <ul className="space-y-3 border-t border-platinum/10 pt-6">
+                {service.points.map((point) => (
+                  <li key={point} className="flex items-start gap-3 font-body text-sm text-platinum-dim">
+                    <KeyRound size={14} className="mt-1 shrink-0 text-primary" aria-hidden="true" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        ))}
       </div>
 
-      <Reveal>
-        <div className="border border-platinum/10 p-10 lg:p-12">
-          <p className="overline text-platinum-dim mb-6">Tooling we work in</p>
-          <div className="flex flex-wrap gap-3">
-            {["AWS", "Azure", "Terraform", "IAM and least privilege", "KMS and secrets management", "CloudTrail and audit logging", "Threat modelling", "NDPA / NDPC", "GDPR", "Incident forensics"].map(
-              (t) => (
-                <span
-                  key={t}
-                  className="font-body text-xs text-platinum-dim border border-platinum/15 px-4 py-2"
-                >
-                  {t}
-                </span>
-              ),
-            )}
-          </div>
+      <SectionHeading
+        overline="The process"
+        title="Engagement Protocol"
+        intro="Five steps from the first review through ongoing checks."
+      />
+      <div className="mb-24">
+        <NumberedList items={workflow} />
+      </div>
+
+      <Reveal className="mb-8">
+        <div className="flex flex-col items-start gap-5 border-t border-platinum/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <p className="font-body text-sm text-platinum-dim">Working with AWS, Azure, Terraform and the controls your team already uses.</p>
+          <Button asChild variant="outline" className="rounded-sm">
+            <a href="#security-form">Request a security review <ArrowUpRight aria-hidden="true" /></a>
+          </Button>
         </div>
       </Reveal>
 
-      <ContactBlock
-        service="security"
-        subject="Security and governance enquiry"
-        body="Tell us what you are running, where your data sits, and whether this is a compliance question, a hardening question, or something that has already happened."
-        note="If you are responding to a live incident, say so in the subject line and we will move first and talk terms after."
-      />
+      <ServiceInquiryForm kind="security-review" />
     </ServicePageLayout>
   </>
 );

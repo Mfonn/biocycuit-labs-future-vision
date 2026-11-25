@@ -53,6 +53,37 @@
   }
 }
 
+/* Service-page colors stay local to the Agentic AI and Security pages. */
+[data-service-theme="obsidian"] {
+  --background: 150 18% 3%;
+  --foreground: 45 28% 93%;
+  --card: 155 16% 7%;
+  --card-foreground: 45 28% 93%;
+  --popover: 155 16% 7%;
+  --popover-foreground: 45 28% 93%;
+  --primary: 159 84% 39%;
+  --primary-foreground: 150 18% 3%;
+  --secondary: 158 32% 13%;
+  --secondary-foreground: 45 24% 88%;
+  --muted: 155 24% 10%;
+  --muted-foreground: 150 9% 63%;
+  --accent: 47 64% 52%;
+  --accent-foreground: 150 18% 3%;
+  --border: 155 22% 17%;
+  --input: 155 22% 17%;
+  --ring: 159 84% 39%;
+  --platinum: 45 28% 84%;
+  --platinum-dim: 150 9% 62%;
+  --sidebar-background: 150 18% 3%;
+  --sidebar-foreground: 45 28% 93%;
+  --sidebar-primary: 159 84% 39%;
+  --sidebar-primary-foreground: 150 18% 3%;
+  --sidebar-accent: 158 32% 13%;
+  --sidebar-accent-foreground: 45 24% 88%;
+  --sidebar-border: 155 22% 17%;
+  --sidebar-ring: 159 84% 39%;
+}
+
 @layer base {
   * {
     @apply border-border;

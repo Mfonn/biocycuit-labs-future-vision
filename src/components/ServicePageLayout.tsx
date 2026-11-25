@@ -7,16 +7,27 @@ interface ServicePageLayoutProps {
   title: string;
   subtitle: string;
   overline: string;
+  theme?: "default" | "obsidian";
+  heroAction?: ReactNode;
+  trustNote?: ReactNode;
   children: ReactNode;
 }
 
-const ServicePageLayout = ({ title, subtitle, overline, children }: ServicePageLayoutProps) => {
+const ServicePageLayout = ({
+  title,
+  subtitle,
+  overline,
+  theme = "default",
+  heroAction,
+  trustNote,
+  children,
+}: ServicePageLayoutProps) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" data-service-theme={theme === "default" ? undefined : theme}>
       <Navbar />
 
       <section className="relative pt-44 pb-24 px-6 lg:px-10 overflow-hidden fine-grid">
@@ -49,6 +60,16 @@ const ServicePageLayout = ({ title, subtitle, overline, children }: ServicePageL
           >
             {subtitle}
           </motion.p>
+          {(heroAction || trustNote) && (
+            <div className="mt-9 flex flex-col items-start gap-5">
+              {heroAction}
+              {trustNote && (
+                <p className="max-w-2xl border-l border-accent/60 pl-4 font-body text-sm leading-relaxed text-platinum-dim">
+                  {trustNote}
+                </p>
+              )}
+            </div>
+          )}
         </div>
       </section>
 
