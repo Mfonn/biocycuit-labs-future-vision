@@ -14,6 +14,7 @@ import AutismNeurodivergence from "./pages/research/AutismNeurodivergence";
 import WaterResearch from "./pages/research/WaterResearch";
 import Numerology from "./pages/research/Numerology";
 import MyceliumElectrodeArrays from "./pages/research/MyceliumElectrodeArrays";
+import ReadinessAssessment from "./pages/ReadinessAssessment";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/agentic-ai" element={<AgenticAI />} />
           <Route path="/security-governance" element={<SecurityGovernance />} />
+          <Route path="/readiness-assessment" element={<ReadinessAssessment />} />
           <Route path="/deep-research" element={<DeepResearch />} />
           <Route path="/research" element={<Research />} />
           <Route path="/research/autism-neurodivergence" element={<AutismNeurodivergence />} />

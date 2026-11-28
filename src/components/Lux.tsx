@@ -67,7 +67,7 @@ export const NumberedList = ({
 );
 
 export const mailto = (subject: string, body?: string) =>
-  `mailto:Biocircuitlaboratories@gmail.com?subject=${encodeURIComponent(subject)}${
+  `mailto:hello@biocircuitlaboratories.com.ng?subject=${encodeURIComponent(subject)}${
     body ? `&body=${encodeURIComponent(body)}` : ""
   }`;
 

@@ -57,7 +57,7 @@ const Navbar = () => {
             </Link>
           ))}
           <a
-            href="mailto:Biocircuitlaboratories@gmail.com?subject=Enquiry%20from%20the%20website"
+            href="mailto:hello@biocircuitlaboratories.com.ng?subject=Enquiry%20from%20the%20website"
             className="text-[11px] font-body uppercase tracking-[0.22em] border border-platinum/20 px-5 py-2.5 text-foreground hover:border-primary hover:text-primary transition-colors duration-500"
           >
             Talk to us
@@ -94,7 +94,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <a
-                href="mailto:Biocircuitlaboratories@gmail.com?subject=Enquiry%20from%20the%20website"
+                href="mailto:hello@biocircuitlaboratories.com.ng?subject=Enquiry%20from%20the%20website"
                 className="font-body text-sm text-primary"
               >
                 Talk to us

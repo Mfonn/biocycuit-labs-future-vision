@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security Audit and Artificial Intelligence Readiness check | BioCircuit Laboratories</title>
+<meta name="theme-color" content="#161c16">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&family=IM+Fell+English+SC&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#161c16; --s1:#1c251d; --s2:#223024; --ink:#f3f4ef; --muted:#a8b7a9;
+  --line:#2d3b2e; --line2:#47604a; --emerald:#4aa8e0; --gold:#a9cbe9; --gold-d:#6f9fc4;
+  --paper:var(--s2); --brass:var(--gold);
+  --serif:"IM Fell English","Iowan Old Style",Palatino,Georgia,serif;
+  --sc:"IM Fell English SC","IM Fell English",Georgia,serif;
+  --sans:Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:400 16.5px/1.7 var(--sans);-webkit-font-smoothing:antialiased;
+  background:radial-gradient(54rem 26rem at 18% -8rem,rgba(60,100,30,.30),transparent 70%),var(--bg)}
+.wrap{width:min(100% - 40px,720px);margin:0 auto}
+
+.bar{position:sticky;top:0;z-index:5;padding:10px 0;border-bottom:1px solid var(--line);
+  background:rgba(22,28,22,.85);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.bar::after{content:"";position:absolute;left:0;bottom:-1px;height:2px;width:calc(var(--p,0)*100%);
+  background:linear-gradient(90deg,var(--emerald),var(--gold));transition:width .5s ease}
+.bar .wrap{display:flex;align-items:center;gap:14px}
+.bar svg{width:44px;height:44px;flex:none}
+.bar svg circle:first-child{stroke:var(--gold);stroke-width:2.5}
+.bar svg g{stroke:var(--line2)}
+.bar svg circle:last-child{fill:var(--gold)}
+#hMin{stroke:var(--ink);stroke-width:3}
+#hHr{stroke:var(--emerald);stroke-width:5}
+.bar p{margin:0;font-size:.9rem;color:var(--muted)}
+.bar b{color:var(--ink);font-weight:700}
+.brand{margin-left:auto;font:400 1.15rem var(--sc);letter-spacing:.04em;color:var(--ink)}
+
+h1,h2,h3{font-family:var(--serif);font-weight:400}
+h1{font-family:var(--sc);font-weight:400;font-size:clamp(2.2rem,6.4vw,3.5rem);line-height:1.1;letter-spacing:.005em;margin:68px 0 22px;max-width:15em}
+h1::before{content:"";display:block;width:44px;height:1px;background:var(--gold);margin-bottom:26px}
+.lede{color:var(--muted);font-size:1.04rem;max-width:62ch;margin:0 0 12px}
+.note{margin:26px 0 0;padding:14px 18px;border:1px solid var(--line);border-left:2px solid var(--gold);
+  border-radius:4px 10px 10px 4px;background:rgba(169,203,233,.05);font-size:.94rem;color:var(--ink)}
+
+fieldset{border:0;border-top:1px solid var(--line);margin:0;padding:42px 0 14px}
+#qs fieldset:first-child{margin-top:44px}
+legend{padding:0;float:left;width:100%}
+legend h2{font-size:clamp(1.5rem,3.9vw,1.8rem);line-height:1.25;margin:0 0 8px;letter-spacing:-.005em}
+.hint{clear:both;margin:0 0 14px;color:var(--muted);font-size:.9rem}
+.opts{clear:both;display:grid;gap:10px;margin-top:16px}
+
+.opt{position:relative;display:flex;gap:14px;align-items:flex-start;padding:15px 18px;border:1px solid var(--line);
+  border-radius:10px;background:var(--s1);cursor:pointer;transition:border-color .2s,background .2s}
+.opt::before{content:"";flex:none;width:18px;height:18px;margin-top:4px;border:1.5px solid var(--line2);
+  border-radius:50%;transition:border-color .2s,background .2s}
+.opt:has(input[type=checkbox])::before{border-radius:5px}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt:hover{border-color:var(--line2);background:var(--s2)}
+.opt:has(input:checked){border-color:var(--gold-d);background:linear-gradient(90deg,rgba(74,168,224,.09),transparent 75%),var(--s1)}
+.opt:has(input[type=radio]:checked)::before{border-color:var(--gold);background:radial-gradient(circle,var(--gold) 0 4.5px,transparent 5.5px)}
+.opt:has(input[type=checkbox]:checked)::before{border-color:var(--gold);background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3.5 8.5l3 3 6-7' fill='none' stroke='%230a120e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.opt:has(input:focus-visible){outline:2px solid var(--gold);outline-offset:3px}
+
+#res{scroll-margin-top:88px;margin:60px 0 0;padding:clamp(24px,5vw,46px);border:1px solid var(--line2);
+  border-top:2px solid var(--gold);border-radius:18px;background:linear-gradient(160deg,var(--s2),var(--s1));
+  box-shadow:0 36px 70px -34px rgba(0,0,0,.8);animation:rise .6s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.score{font:500 clamp(3.8rem,13vw,5.4rem)/1 var(--serif);color:var(--gold)}
+.score small{font:400 1rem var(--sans);color:var(--muted)}
+.tag{display:inline-block;margin-left:14px;padding:4px 14px;border:1px solid var(--emerald);border-radius:99px;
+  background:rgba(74,168,224,.08);color:var(--emerald);font-size:.82rem;font-weight:700;letter-spacing:.02em;vertical-align:middle}
+#res h2{font-size:clamp(1.7rem,5vw,2.2rem);line-height:1.15;margin:18px 0 10px}
+#res p{color:var(--muted)}
+h3{font-size:1.35rem;margin:30px 0 8px;color:var(--ink)}
+#steps{padding-left:22px;margin:0}
+#steps li{margin:12px 0;padding-left:6px}
+#steps li::marker{color:var(--gold);font-weight:700}
+.sector{margin-top:28px;padding:18px 22px;border-left:2px solid var(--emerald);border-radius:0 10px 10px 0;background:rgba(74,168,224,.06)}
+.sector strong{font:400 1.2rem var(--serif);color:var(--ink)}
+
+.contact{margin-top:44px;padding-top:34px;border-top:1px solid var(--line)}
+.contact h2{font-size:1.65rem;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 12px}
+input[type=text],input[type=email],input[type=tel],textarea{width:100%;padding:14px 16px;border:1px solid var(--line2);
+  border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;font-size:.96rem;transition:border-color .2s}
+input::placeholder,textarea::placeholder{color:#6f8377}
+textarea{min-height:110px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid rgba(169,203,233,.35);outline-offset:1px;border-color:var(--gold)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 30px;border-radius:99px;
+  border:1px solid var(--gold);font:700 .95rem var(--sans);text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
+.btn.p{background:var(--gold);color:#0e1410}
+.btn.p:hover{background:#c7def1}
+.btn.s{background:transparent;color:var(--gold)}
+.btn.s:hover{background:rgba(169,203,233,.1)}
+.btn:focus-visible{outline:2px solid var(--emerald);outline-offset:3px}
+.fine{margin:30px 0 56px;color:var(--muted);font-size:.8rem;max-width:62ch}
+a{color:var(--emerald);text-underline-offset:3px}
+.hand{transition:transform .7s cubic-bezier(.3,1.3,.5,1);transform-origin:50px 50px}
+
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34.64' height='60' viewBox='0 0 34.64 60'%3E%3Cpath d='M0 10L17.32 0L34.64 10M0 10V30L17.32 40L34.64 30V10M17.32 40V60' fill='none' stroke='%23a9cbe9' stroke-opacity='.075'/%3E%3C/svg%3E");
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 62%);mask-image:linear-gradient(180deg,#000,transparent 62%)}
+main{position:relative}
+.hex{position:absolute;z-index:-1;top:26px;right:-80px;width:min(310px,42vw);opacity:.42;pointer-events:none}
+fieldset{position:relative}
+fieldset::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;background:var(--bg);border:1px solid var(--emerald);transform:rotate(45deg)}
+.foot{position:relative;margin-top:40px;border-top:1px solid var(--line2);
+  background:radial-gradient(40rem 16rem at 10% 0,rgba(138,58,20,.17),transparent 70%),radial-gradient(34rem 14rem at 95% 100%,rgba(60,100,30,.30),transparent 70%),var(--s1)}
+.foot .wrap{padding:52px 0 30px}
+.trace{display:block;width:260px;height:14px;margin-bottom:36px}
+.cols{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:38px}
+.foot .mono{width:46px;height:46px;margin-bottom:14px}
+.foot .wm{margin:0 0 10px;font:400 1.55rem/1.2 var(--sc);letter-spacing:.03em;color:var(--ink)}
+.foot h4{margin:0 0 12px;font:400 1.05rem var(--sc);letter-spacing:.06em;color:var(--gold)}
+.foot p,.foot span,.foot a{display:block;margin:0 0 8px;font-size:.92rem;color:var(--muted)}
+.foot a{width:fit-content;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line2);transition:border-color .2s}
+.foot a:hover{border-color:var(--emerald)}
+.foot .legal{margin:42px 0 0;padding-top:18px;border-top:1px solid var(--line);font-size:.8rem}
+@media (max-width:700px){.hex{display:none}.cols{grid-template-columns:1fr;gap:30px}}
+@media print{.hex,body::before,.foot .trace{display:none}}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:560px){
+  body{font-size:16px}
+  .grid{grid-template-columns:1fr}
+  .btns{flex-direction:column}.btn{width:100%}
+  .brand{display:none}
+  h1{margin-top:44px}
+  .tag{margin:12px 0 0 0;display:table}
+}
+@media print{
+  :root{--bg:#fff;--s1:#fff;--s2:#fff;--ink:#111;--muted:#333;--line:#bbb;--line2:#999;--gold:#333;--emerald:#111}
+  body{background:#fff;color:#111}
+  .bar,.btns,#qs{display:none!important}
+  #res{margin:0;border:1px solid #bbb;box-shadow:none;background:#fff;animation:none}
+  .score,.tag{color:#111}
+  .tag{border-color:#555;background:none}
+}
+</style>
+</head>
+<body>
+<div class="bar" role="status" aria-live="polite">
+  <div class="wrap">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="46" fill="var(--paper)" stroke="var(--ink)" stroke-width="4"/>
+      <g stroke="var(--line)" stroke-width="3" stroke-linecap="round">
+        <path d="M50 8v8M92 50h-8M50 92v-8M8 50h8"/>
+      </g>
+      <line id="hMin" class="hand" x1="50" y1="50" x2="50" y2="14" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+      <line id="hHr" class="hand" x1="50" y1="50" x2="50" y2="28" stroke="var(--brass)" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="50" cy="50" r="4" fill="var(--ink)"/>
+    </svg>
+    <p id="prog"><b>0 of 9</b> answered</p>
+    <span class="brand">BioCircuit Laboratories</span>
+  </div>
+</div>
+
+<main class="wrap">
+  <svg class="hex" viewBox="0 0 240 240" aria-hidden="true" fill="none" stroke="#a9cbe9" stroke-width="1.2">
+    <path d="M90 26L128.1 48V92L90 114L51.9 92V48Z"/>
+    <path d="M156 64L194.1 86V130L156 152L117.9 130V86Z" stroke-opacity=".7"/>
+    <path d="M110 118L148.1 140V184L110 206L71.9 184V140Z" stroke-opacity=".85"/>
+    <path d="M128.1 48L156 64M117.9 130L90 114M51.9 92L71.9 140M148.1 140L156 152" stroke="#4aa8e0"/>
+    <g stroke="none"><circle cx="90" cy="26" r="5" fill="#cfe2f3"/><circle cx="128.1" cy="48" r="3.5" fill="#4aa8e0"/><circle cx="51.9" cy="92" r="4" fill="#cfe2f3"/><circle cx="194.1" cy="86" r="6" fill="#2b86c5"/><circle cx="156" cy="152" r="4.5" fill="#cfe2f3"/><circle cx="117.9" cy="130" r="3.5" fill="#cfe2f3"/><circle cx="71.9" cy="184" r="6" fill="#2b86c5"/><circle cx="110" cy="206" r="4" fill="#cfe2f3"/><circle cx="148.1" cy="184" r="3.5" fill="#4aa8e0"/><circle cx="51.9" cy="48" r="3" fill="#4aa8e0"/></g>
+  </svg>
+  <h1>Security Audit and Artificial Intelligence Readiness check</h1>
+  <p class="note">This is a self-assessment, not an audit. Choose what actually happens not what you hope happens.</p>
+
+  <form id="f"><div id="qs"></div></form>
+
+  <section id="res" hidden aria-live="polite">
+    <div><span class="score"><span id="sc">0</span> <small>/ 100</small></span><span class="tag" id="tag"></span></div>
+    <h2 id="vt"></h2>
+    <p id="vd"></p>
+    <h3>What to do next</h3>
+    <ol id="steps"></ol>
+    <div class="sector" id="sec"></div>
+
+    <div class="contact">
+      <h2>Want to talk it through?</h2>
+      <p class="lede">Add your details and choose “Email my results”. <a href="mailto:hello@biocircuitlaboratories.com.ng">hello@biocircuitlaboratories.com.ng</a>.</p>
+      <div class="grid">
+        <input type="text" id="cn" autocomplete="name" placeholder="Your name" aria-label="Your name">
+        <input type="email" id="ce" autocomplete="email" placeholder="Your email" aria-label="Your email">
+        <input type="text" id="cc" autocomplete="organization" placeholder="Business name" aria-label="Business name">
+        <input type="tel" id="cp" autocomplete="tel" placeholder="Phone (optional)" aria-label="Phone">
+      </div>
+      <textarea id="cx" placeholder="Anything else we should know? A question, a worry, the task that slows you down most." aria-label="Notes"></textarea>
+      <div class="btns">
+        <a class="btn p" id="mail" href="mailto:hello@biocircuitlaboratories.com.ng">Email my results</a>
+        <button class="btn s" type="button" id="prt">Save as PDF</button>
+      </div>
+    </div>
+    <p class="fine">BioCircuit Laboratories builds hardened cloud and code security with AI workflows designed around real human work. This check is preliminary. It is not a security audit, legal opinion or compliance certificate.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <svg class="trace" viewBox="0 0 260 14" aria-hidden="true" fill="none" stroke="#47604a" stroke-width="1.2"><path d="M0 7H70L78 2H120L128 7H200"/><circle cx="70" cy="7" r="2.5" fill="#a9cbe9" stroke="none"/><circle cx="128" cy="7" r="2.5" fill="#a9cbe9" stroke="none"/><circle cx="200" cy="7" r="3.5" fill="#4aa8e0" stroke="none"/></svg>
+    <div class="cols">
+      <div>
+        <svg class="mono" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="#a9cbe9" stroke-width="1.5"><path d="M24 4L41.3 14V34L24 44L6.7 34V14Z"/><path d="M24 24V14M24 24L33 29M24 24L15 29" stroke="#4aa8e0"/><g stroke="none" fill="#cfe2f3"><circle cx="24" cy="14" r="2.4"/><circle cx="33" cy="29" r="2.4"/><circle cx="15" cy="29" r="2.4"/></g><circle cx="24" cy="24" r="3.4" fill="#4aa8e0" stroke="none"/></svg>
+        <p class="wm">BioCircuit Laboratories</p>
+        <p>Ethical AI and cloud security. Hardened systems and AI workflows built around real human work.</p>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <a href="mailto:hello@biocircuitlaboratories.com.ng">hello@biocircuitlaboratories.com.ng</a>
+        <a href="https://biocircuitlaboratories.org" rel="noopener">biocircuitlaboratories.com.ng</a>
+        <span>Abuja, Nigeria</span>
+      </div>
+      <div>
+        <h4>What we do</h4>
+        <span>Cloud and code security</span>
+        <span>Custom AI agents</span>
+        <span>Sovereign cloud and on-site Artificial Intelligence Infrastructure</span>
+      </div>
+    </div>
+    <p class="legal">&copy; 2024 BioCircuit Laboratories Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+"use strict";
+const $=id=>document.getElementById(id), f=$("f"), qs=$("qs");
+const sel=n=>f.querySelector(`input[name="${n}"]:checked`)?.value??"";
+
+const BN={
+  healthcare:["Writing notes, preparing handovers or sorting requests","Handling referrals, approvals or paperwork"],
+  retail:["Answering the same customer questions, or giving product and fitting advice","Preparing quotes and following up enquiries"],
+  hospitality:["Managing bookings and guest requests","Handling event enquiries or coordinating between branches"],
+  energy:["Writing field reports, inspection notes or maintenance logs","Preparing incident, outage or regulatory reports","Answering customer billing queries and service requests"],
+  enterprise:["Drafting documents, reports or client replies","Routing routine approvals and internal requests"],
+  other:["Answering the same customer questions again and again","Manual admin and paperwork"]
+};
+const SECTOR_NOTE={
+  healthcare:"Patient details should never be pasted into public AI tools. Where records are sensitive, ask whether the tool can run inside your own private cloud or on local hardware, and keep a clinician checking anything that reaches a patient.",
+  retail:"Buyer details, quotes and order history are customer data. Start with questions your team answers every day, and let staff approve anything before it goes to a buyer.",
+  hospitality:"Guest records are personal data. For multi-branch groups, plan how bookings are shared between branches without sharing more guest detail than each branch needs.",
+  energy:"Keep AI tools separate from anything that controls equipment, plants or the grid. Begin with reports, logs and planning paperwork, with an engineer signing off, and treat remote sites, contractors and field devices as part of your access review.",
+  enterprise:"Client files and financial records often carry legal duties. Check where an AI tool stores what you enter before it touches client work.",
+  other:"Whatever your field, start where the information is least sensitive and the time saved is easiest to measure."
+};
+
+const Q=[
+ {n:"sector",t:"What kind of business do you run?",o:[["healthcare","Healthcare, health insurance or care services"],["retail","Retail, e-commerce, furniture or a showroom"],["hospitality","Hotel, restaurant or hospitality group"],["energy","Energy: power, oil and gas, solar, or utilities"],["enterprise","Financial, legal, professional or another regulated business"],["other","Another type of business"]]},
+ {n:"aiUse",c:1,t:"How are you and your team using AI for work?",h:"Select all that apply. Include tools staff use on their own.",o:[["approved","We use tools the business has reviewed and approved"],["unofficial","Staff may use personal or unapproved AI tools for work"],["unknown","We haven’t checked which AI tools people use"],["none","We don’t currently use AI tools for work"]]},
+ {n:"aiData",t:"Do you know what AI tools may do with the information your team enters?",o:[["clear","Yes. We checked the tools we use and set clear rules for staff"],["partial","We understand some tools but haven’t checked them all"],["unknown","No. We aren’t sure how prompts or uploaded files are handled"]]},
+ {n:"data",t:"Where does your important customer, financial or patient information live?",o:[["20","In business systems with clear access rules and a named person responsible"],["15","Mostly in business systems, but access rules could be clearer"],["8","Across shared apps, email, spreadsheets or staff devices"],["2","We aren’t sure where all of it is or who can see it"]]},
+ {n:"access",t:"How do you manage access to important business accounts?",o:[["20","Everyone has their own account and extra sign-in protection, and access is reviewed regularly"],["13","Most people do, but reviews are occasional"],["5","Some accounts are shared, or former staff may still have access"],["1","We don’t have a clear picture of who can get into key accounts"]]},
+ {n:"urgency",t:"If nothing changed in the next six months, what would happen?",o:[["20","We would keep losing noticeable time or money, or miss a specific deadline"],["12","Work would carry on, but delays and manual tasks would hold back growth"],["2","Nothing important. We’re exploring AI because it feels like the next step"]]},
+ {n:"bottleneck",t:"Which repetitive task slows your team down most?",h:"The options change with the kind of business you chose.",o:null},
+ {n:"review",t:"Who should check important AI-assisted work before it reaches a customer or shapes a decision?",o:[["15","A staff member, every time, before anything is sent or acted on"],["9","Staff check some of it, but the rule isn’t consistent"],["2","We expect AI to handle important work without a person checking"]]},
+ {n:"owner",t:"Who inside the business would own an AI or security improvement?",o:[["15","One person who can decide and bring the right people together"],["9","Someone could, but their role and time aren’t agreed"],["2","No one is responsible for moving this forward"]]}
+];
+
+function bnOpts(){
+  const s=sel("sector")||"other";
+  return [...BN[s].map(x=>["10",x]),["10","Keeping track of access, important accounts or customer information","security"],["2","We don’t have one clear problem yet","none"]];
+}
+function build(){
+  qs.innerHTML="";
+  Q.forEach((q,i)=>{
+    const fs=document.createElement("fieldset"), lg=document.createElement("legend"), h=document.createElement("h2");
+    h.textContent=`${i+1}. ${q.t}`; lg.append(h); fs.append(lg);
+    if(q.h){const p=document.createElement("p");p.className="hint";p.textContent=q.h;fs.append(p)}
+    const box=document.createElement("div");box.className="opts";box.id="o-"+q.n;fs.append(box);qs.append(fs);
+    fill(q);
+  });
+}
+function fill(q){
+  const box=$("o-"+q.n);box.innerHTML="";
+  (q.o||bnOpts()).forEach(([v,l,tag])=>{
+    const lab=document.createElement("label"),inp=document.createElement("input");
+    lab.className="opt";inp.type=q.c?"checkbox":"radio";inp.name=q.n;inp.value=v;if(tag)inp.dataset.tag=tag;
+    lab.append(inp,document.createTextNode(l));box.append(lab);
+  });
+}
+
+function gaps(){
+  const g=[],use=[...f.querySelectorAll('input[name=aiUse]:checked')].map(x=>x.value);
+  if(+sel("data")<=8)g.push("where important information is stored and who can see it");
+  if(+sel("access")<=5)g.push("who can get into key business accounts");
+  if((use.includes("unofficial")||use.includes("unknown"))&&sel("aiData")!=="clear")g.push("what happens to information staff type into AI tools");
+  if(+sel("review")<=2)g.push("having a person check important AI-assisted work");
+  return g;
+}
+function score(){
+  const s=["data","access","urgency","review","owner"].reduce((a,n)=>a+ +sel(n),0);
+  return Math.min(100,Math.round(s+({clear:5,partial:3,unknown:0}[sel("aiData")]||0)+ +sel("bottleneck")/2));
+}
+function answered(){
+  const n=Q.filter(q=>q.c?f.querySelector(`input[name=${q.n}]:checked`):sel(q.n)).length;return n;
+}
+function clock(n){
+  document.documentElement.style.setProperty("--p",n/9);
+  const a=n/9*360;
+  $("hMin").style.transform=`rotate(${a*4}deg)`;
+  $("hHr").style.transform=`rotate(${a}deg)`;
+}
+function steps(sc,urgent,none,g){
+  const s=[];
+  if(g.length)s.push("Start with the basics: look at "+g.join("; ")+". Agree simple rules and name someone to follow them up.");
+  if(sel("aiData")!=="clear")s.push("List the AI tools your staff use, read their business terms, and tell people what must never be typed into them.");
+  if(+sel("access")<20)s.push("Review who can sign in to important accounts, remove access that is no longer needed, and give each person their own login.");
+  s.push(!urgent||none?"Before paying for a custom AI build, pick one recurring task, measure the time or money it costs, and decide what a small successful test would look like.":"Choose one clearly defined bottleneck and test a small, reversible solution before expanding it.");
+  if(sel("owner")!=="15")s.push("Give one person the job of owning the next step, with enough time and authority to bring others in.");
+  if(sel("review")!=="15")s.push("Decide which work must be checked by a staff member before it reaches customers or affects a decision.");
+  if(sc>=75&&!g.length&&urgent&&!none)s.unshift("You have a promising start for a small, measurable pilot. Keep it narrow and review the results before growing it.");
+  return [...new Set(s)].slice(0,5);
+}
+function update(){
+  const n=answered();clock(n);
+  const done=n===9;
+  $("prog").innerHTML=done?'<b>All 9 answered.</b> <a href="#res">See your result</a>':`<b>${n} of 9</b> answered. The clock moves as you go.`;
+  $("res").hidden=!done;
+  if(!done)return;
+  const sc=score(),urgent=+sel("urgency")>=12,tg=f.querySelector('input[name=bottleneck]:checked').dataset.tag,none=tg==="none",g=gaps();
+  let t,b,d;
+  if(g.length){t="Fix the basics before building";b="Foundations first";d="Some everyday safeguards need attention before a custom AI project. Building first could add cost and complexity without fixing the underlying risks."}
+  else if(!urgent||none){t="Be clear about the problem first";b="No rush to build";d="Your answers don’t yet show a clear, pressing problem for AI to solve. A custom build now could end up unused. Measure one recurring task and confirm a small solution would make a real difference."}
+  else if(sc>=75){t="A small, staged pilot makes sense";b="Ready to pilot";d="You have a real need and a reasonable foundation. Test one bounded use with staff review and clear measures of success before committing to more."}
+  else{t="Prepare, then test one small improvement";b="Prepare first";d="There may be a useful opportunity, but some everyday practices need more clarity. Tidy the basics below, then try a limited pilot tied to a measurable result."}
+  const st=steps(sc,urgent,none,g);
+  $("sc").textContent=sc;$("tag").textContent=b;$("vt").textContent=t;$("vd").textContent=d;
+  $("steps").replaceChildren(...st.map(x=>{const li=document.createElement("li");li.textContent=x;return li}));
+  const sec=$("sec");sec.replaceChildren();
+  const hh=document.createElement("strong");hh.textContent="A note for your sector";
+  const pp=document.createElement("p");pp.style.margin="6px 0 0";pp.textContent=SECTOR_NOTE[sel("sector")];
+  sec.append(hh,pp);
+  mail(sc,t,d,st);
+}
+function mail(sc,t,d,st){
+  const lab=n=>[...f.querySelectorAll(`input[name=${n}]:checked`)].map(i=>i.parentElement.textContent.trim()).join("; ")||"Not answered";
+  const v=id=>$(id).value.trim()||"Not provided";
+  const body=["AI readiness check","",`Score: ${sc}/100`,`Result: ${t}`,d,"","Next steps:",...st.map((s,i)=>`${i+1}. ${s}`),"",
+    "Answers:",...Q.map((q,i)=>`${i+1}. ${q.t}\n   ${lab(q.n)}`),"",
+    "Contact:",`Name: ${v("cn")}`,`Email: ${v("ce")}`,`Business: ${v("cc")}`,`Phone: ${v("cp")}`,"","Notes:",v("cx")].join("\n");
+  $("mail").href=`mailto:hello@biocircuitlaboratories.com.ng?subject=${encodeURIComponent("AI readiness check")}&body=${encodeURIComponent(body)}`;
+}
+
+build();
+f.addEventListener("change",e=>{
+  const i=e.target;
+  if(i.name==="sector")fill(Q[6]);
+  if(i.name==="aiUse"){
+    const all=[...f.querySelectorAll("input[name=aiUse]")],none=all.find(x=>x.value==="none");
+    if(i.value==="none"&&i.checked)all.forEach(x=>{if(x!==none)x.checked=false});
+    else if(i.checked)none.checked=false;
+  }
+  update();
+});
+["cn","ce","cc","cp","cx"].forEach(id=>$(id).addEventListener("input",()=>{if(!$("res").hidden)update()}));
+$("prt").addEventListener("click",()=>window.print());
+update();
+</script>
+</body>
+</html>

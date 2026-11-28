@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { agenticInquirySchema, securityInquirySchema } from "@/components/ServiceInquiryForm";
+import { mailto } from "@/components/Lux";
 
 const validInquiry = {
   name: "Morgan Lee",
@@ -29,5 +30,11 @@ describe("service enquiry requirements", () => {
   it("requires a valid work email before preparing an enquiry", () => {
     expect(agenticInquirySchema.safeParse({ ...validInquiry, email: "not-an-email" }).success).toBe(false);
     expect(securityInquirySchema.safeParse({ ...validInquiry, email: "not-an-email" }).success).toBe(false);
+  });
+
+  it("prepares service drafts for the current BioCircuit contact address", () => {
+    expect(mailto("Service enquiry", "Details & context")).toBe(
+      "mailto:hello@biocircuitlaboratories.com.ng?subject=Service%20enquiry&body=Details%20%26%20context",
+    );
   });
 });

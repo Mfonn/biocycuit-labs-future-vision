@@ -71,7 +71,7 @@ const HeroSection = () => {
                 <ArrowRight size={14} className="transition-transform duration-500 group-hover:translate-x-1" />
               </Link>
               <a
-                href="mailto:Biocircuitlaboratories@gmail.com?subject=Enquiry%20from%20the%20website"
+                href="mailto:hello@biocircuitlaboratories.com.ng?subject=Enquiry%20from%20the%20website"
                 className="inline-flex items-center justify-center px-8 py-4 border border-platinum/20 text-foreground font-body text-[11px] uppercase tracking-[0.22em] hover:border-primary hover:text-primary transition-colors duration-500"
               >
                 Talk to us

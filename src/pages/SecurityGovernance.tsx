@@ -4,6 +4,7 @@ import ServicePageLayout from "@/components/ServicePageLayout";
 import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Cloud, FileCheck2, KeyRound, SearchCheck, ShieldCheck, Siren } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const capabilities = [
   {
@@ -82,7 +83,7 @@ const SecurityGovernance = () => (
         provider: {
           "@type": "ProfessionalService",
           name: "BioCircuit Laboratories",
-          email: "Biocircuitlaboratories@gmail.com",
+          email: "hello@biocircuitlaboratories.com.ng",
           address: { "@type": "PostalAddress", addressLocality: "Abuja", addressCountry: "NG" },
         },
       }}
@@ -93,9 +94,14 @@ const SecurityGovernance = () => (
       title="Enterprise Armor for Your Cloud and Code."
       subtitle="Lock down cloud servers, APIs and software pipelines before exposed keys or misconfigurations lead to a breach or regulatory fine."
       heroAction={
-        <Button asChild className="rounded-sm">
-          <a href="#security-form">Request a Security Review <ArrowUpRight aria-hidden="true" /></a>
-        </Button>
+        <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+          <Button asChild className="rounded-sm">
+            <a href="#security-form">Request a Security Review <ArrowUpRight aria-hidden="true" /></a>
+          </Button>
+          <Button asChild variant="outline" className="rounded-sm">
+            <Link to="/readiness-assessment">Take the readiness assessment <ArrowUpRight aria-hidden="true" /></Link>
+          </Button>
+        </div>
       }
       trustNote="Cloud hardening • Code and container checks • Hands-on fixes • NDPA and UK GDPR readiness"
     >
@@ -168,11 +174,19 @@ const SecurityGovernance = () => (
       </div>
 
       <Reveal className="mb-8">
-        <div className="flex flex-col items-start gap-5 border-t border-platinum/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-body text-sm text-platinum-dim">Working with AWS, Azure, Terraform and the controls your team already uses.</p>
-          <Button asChild variant="outline" className="rounded-sm">
-            <a href="#security-form">Request a security review <ArrowUpRight aria-hidden="true" /></a>
-          </Button>
+        <div className="flex flex-col gap-5 border-t border-platinum/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="font-body text-sm text-platinum-dim mb-2">Working with AWS, Azure, Terraform and the controls your team already uses.</p>
+            <p className="font-body text-sm text-platinum-dim">Not sure where to begin? Start with the readiness assessment.</p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Button asChild variant="outline" className="rounded-sm">
+              <Link to="/readiness-assessment">Take the readiness assessment <ArrowUpRight aria-hidden="true" /></Link>
+            </Button>
+            <Button asChild className="rounded-sm">
+              <a href="#security-form">Request a quote or call <ArrowUpRight aria-hidden="true" /></a>
+            </Button>
+          </div>
         </div>
       </Reveal>
 

@@ -4,6 +4,7 @@ import ServicePageLayout from "@/components/ServicePageLayout";
 import OrchestrationGraphic from "@/components/OrchestrationGraphic";
 import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   ArrowUpRight,
   Cloud,
@@ -130,11 +131,26 @@ const workflow = [
 
 const caseStudies = [
   {
+    name: "Fitness Agent",
+    domain: "Health & fitness",
+    description: "A live fitness agent built for the health and fitness space.",
+    url: "https://hteu9s3ncobp.run.agentplace.io/",
+    actionLabel: "Open fitness agent",
+  },
+  {
+    name: "Multi-Agent System Architecture",
+    domain: "System architecture",
+    description: "A showcase of the architecture behind a coordinated multi-agent system.",
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7524036327521030148/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BzzPVbaFJRz6DLLpSEj%2F71g%3D%3D",
+    actionLabel: "View architecture showcase",
+  },
+  {
     name: "Balance_ee",
     domain: "Health technology",
     description:
-      "A working example carrying context across days to support reflection on habits, energy and recovery.",
+      "A health-tech prototype carrying context across days to support reflection on habits, energy and recovery.",
     url: "https://partyrock.aws/u/Balancee/S9Kr4lZ5u/Balance_ee",
+    actionLabel: "View health-tech case study",
   },
   {
     name: "FitTrack Daily Progress Monitor",
@@ -142,6 +158,7 @@ const caseStudies = [
     description:
       "A daily progress tool follows trends and adds context, so people can interpret changes without reviewing each number alone.",
     url: "https://partyrock.aws/u/Nonsoo/lA8IeBNX4/FitTrack-Daily-Progress-Monitor",
+    actionLabel: "View health-tech case study",
   },
 ];
 
@@ -181,7 +198,7 @@ const AgenticAI = () => (
         provider: {
           "@type": "ProfessionalService",
           name: "BioCircuit Laboratories",
-          email: "Biocircuitlaboratories@gmail.com",
+          email: "hello@biocircuitlaboratories.com.ng",
           address: { "@type": "PostalAddress", addressLocality: "Abuja", addressCountry: "NG" },
         },
       }}
@@ -192,9 +209,14 @@ const AgenticAI = () => (
       title="BioCircuit Laboratories builds secure AI agents to take repetitive work off your team."
       subtitle="Connect custom workflows to company records, online catalogs or patient intake systems. Keep them in your cloud or run them on hardware inside your building."
       heroAction={
-        <Button asChild className="rounded-sm">
-          <a href="#book-call">Book a 15-Minute Call <ArrowUpRight aria-hidden="true" /></a>
-        </Button>
+        <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+          <Button asChild className="rounded-sm">
+            <a href="#book-call">Book a 15-Minute Call <ArrowUpRight aria-hidden="true" /></a>
+          </Button>
+          <Button asChild variant="outline" className="rounded-sm">
+            <Link to="/readiness-assessment">Take the readiness assessment <ArrowUpRight aria-hidden="true" /></Link>
+          </Button>
+        </div>
       }
       trustNote="First six months of maintenance and tuning included. Year-end setup slots open through January 15, 2027."
     >
@@ -308,9 +330,9 @@ const AgenticAI = () => (
       </div>
 
       <SectionHeading
-        overline="Health technology case studies"
-        title="Working examples"
-        intro="These prototypes show how the same approach can support different routines and audiences."
+        overline="Agentic AI"
+        title="Examples"
+        intro="A fitness agent, a multi-agent architecture showcase and health-tech projects from BioCircuit Laboratories."
       />
       <div className="grid md:grid-cols-2 gap-5 mb-24">
         {caseStudies.map((study, index) => (
@@ -320,7 +342,7 @@ const AgenticAI = () => (
               <h3 className="font-display text-2xl text-foreground mb-4 group-hover:text-primary transition-colors duration-500">{study.name}</h3>
               <p className="font-body text-sm text-platinum-dim leading-relaxed mb-6">{study.description}</p>
               <span className="inline-flex items-center gap-2 text-[11px] font-body uppercase tracking-[0.22em] text-accent">
-                View prototype <ArrowUpRight size={13} aria-hidden="true" />
+                {study.actionLabel} <ArrowUpRight size={13} aria-hidden="true" />
               </span>
             </a>
           </Reveal>
@@ -335,6 +357,25 @@ const AgenticAI = () => (
       <div className="mb-24">
         <NumberedList items={workflow} />
       </div>
+
+      <Reveal className="mb-8">
+        <div className="flex flex-col gap-5 border-t border-platinum/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="overline text-accent mb-3">Choose a useful next step</p>
+            <p className="font-body text-sm text-platinum-dim leading-relaxed max-w-xl">
+              Take the readiness assessment, or tell us what is slowing your team down and request a quote or call.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Button asChild variant="outline" className="rounded-sm">
+              <Link to="/readiness-assessment">Take the readiness assessment <ArrowUpRight aria-hidden="true" /></Link>
+            </Button>
+            <Button asChild className="rounded-sm">
+              <a href="#book-call">Request a quote or call <ArrowUpRight aria-hidden="true" /></a>
+            </Button>
+          </div>
+        </div>
+      </Reveal>
 
       <ServiceInquiryForm kind="agentic-ai" />
     </ServicePageLayout>

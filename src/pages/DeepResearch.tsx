@@ -96,7 +96,7 @@ const DeepResearch = () => (
         provider: {
           "@type": "ProfessionalService",
           name: "BioCircuit Laboratories",
-          email: "Biocircuitlaboratories@gmail.com",
+          email: "hello@biocircuitlaboratories.com.ng",
           address: { "@type": "PostalAddress", addressLocality: "Abuja", addressCountry: "NG" },
         },
       }}

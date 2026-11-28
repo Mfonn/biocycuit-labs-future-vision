@@ -12,7 +12,7 @@ const jsonLd = [
     "@type": "ProfessionalService",
     name: "BioCircuit Laboratories",
     url: "https://biocircuitlaboratories.com.ng",
-    email: "Biocircuitlaboratories@gmail.com",
+    email: "hello@biocircuitlaboratories.com.ng",
     description:
       "Agentic AI development, cloud and application security, data protection governance under NDPA and GDPR, and commissioned deep research. Based in Abuja, Nigeria.",
     areaServed: ["Nigeria", "Worldwide"],
